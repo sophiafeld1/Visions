@@ -1,0 +1,56 @@
+[
+  {
+    "id": "v-neck-tie-top",
+    "name": "V Neck Tie Top",
+    "color": "Black",
+    "colorSwatch": "#1a1a1a",
+    "sizes": ["XS"],
+    "inventory": [{ "size": "XS", "quantity": 4 }],
+    "price": 48,
+    "image": "images/v-neck-tie-top.jpg",
+    "description": "A relaxed v-neck with a soft tie detail. Lightweight and flattering."
+  },
+  {
+    "id": "teal skirt low rise foldover",
+    "name": "Teal Skirt Low Rise Foldover",
+    "color": "Teal",
+    "colorSwatch": "#008080",
+    "sizes": ["XS"],
+    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "price": 48,
+    "image": "images/teal-skirt-low-rise-foldover.jpg",
+    "description": "A low rise foldover skirt in teal. Foldvever waistband with a white button. Lightweight and stretchy material."
+  },
+  {
+    "id": "Off the shoulder baggy red Polka dot top red and white with buttons",
+    "name": "Off the shoulder baggy red Polka dot top red and white with buttons",
+    "color": "Red",
+    "colorSwatch": "#ff0000",
+    "sizes": ["XS"],
+    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "price": 48,
+    "image": "images/off-the-shoulder-baggy-red-polka-dot-top-red-and-white-with-buttons.jpg",
+    "description": "A off the shoulder baggy red Polka dot top red and white with buttons."
+  },
+  {
+    "id": "Yellow grommet tank top with grommet headband, cotton",
+    "name": "Yellow grommet tank top with grommet headband, cotton",
+    "color": "Yellow",
+    "colorSwatch": "#ffff00",
+    "sizes": ["XS"],
+    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "price": 70,
+    "image": "images/yellow-grommet-tank-top-with-grommet-headband-cotton.jpg",
+    "description": "A yellow grommet tank top with grommet headband, cotton."
+  },
+  { "id": "Sparkly off slouchy wide neck baggy top ",
+    "name": "Sparkly off slouchy wide neck baggy top ",
+    "color": "grey and black and white and silver",
+    "colorSwatch": "#0000ff",
+    "sizes": ["S"],
+    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "price": 48,
+    "image": "images/blue-grommet-tank-top-with-grommet-headband-cotton.jpg",
+    "description": "A sparkly off slouchy wide neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom."
+  }
+]

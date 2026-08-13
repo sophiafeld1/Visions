@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me — Visions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page-background" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="site-nav-link site-nav-link--active" href="about.html">About Me</a>
+      <a href="index.html">
+        <img
+          class="site-logo"
+          src="images/VISIONStransparentbackground.png"
+          alt="Visions"
+        />
+      </a>
+      <button type="button" class="cart-button" id="cart-open-btn" aria-label="View cart">
+        <svg class="cart-button__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM6.3 6h14.7l-1.4 7.2a1 1 0 0 1-1 .8H8.8a1 1 0 0 1-1-.9L6.3 6Zm-.8-2a1 1 0 0 1 1-1h1.6a1 1 0 0 1 .98.8L9.4 6H19a1 1 0 0 1 .98 1.17l-1.5 7.5a3 3 0 0 1-2.94 2.33H8.4a3 3 0 0 1-2.94-2.4L3.1 4.8A1 1 0 0 1 4.1 4h1.4Z"
+          />
+        </svg>
+        <span id="cart-count" class="cart-button__count" hidden>0</span>
+      </button>
+    </header>
+
+    <main class="about-page">
+      <div class="about-intro">
+        <div class="about-intro__content">
+          <h1 class="about-page__greeting">Hi!</h1>
+          <div class="about-page__text">
+            <p>
+              My name is Sophia. I created VISIONS in 2020, selling corset tops on Depop. I've
+              continued sewing but decided to begin selling my clothing again in 2026 after
+              graduating college. I love thrifting and upcycling old clothes, which most of my
+              items are made from.
+            </p>
+            <p class="about-page__thanks">Thank you for supporting visions</p>
+          </div>
+        </div>
+
+        <div class="about-intro__photo">
+          <img
+            class="about-headshot"
+            src="images/about/headshot.jpg"
+            alt="Sophia"
+            hidden
+            onload="this.hidden=false; this.nextElementSibling.hidden=true;"
+            onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+          />
+          <div class="about-photo-placeholder">Headshot coming soon</div>
+        </div>
+      </div>
+
+      <section class="about-gallery" aria-label="Photos of Sophia sewing">
+        <div class="about-gallery__grid">
+          <figure class="about-gallery__item">
+            <img
+              src="images/about/sewing-1.jpg"
+              alt="Sophia sewing"
+              hidden
+              onload="this.hidden=false; this.nextElementSibling.hidden=true;"
+              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+            />
+            <div class="about-photo-placeholder about-photo-placeholder--small">Photo coming soon</div>
+          </figure>
+          <figure class="about-gallery__item">
+            <img
+              src="images/about/sewing-2.jpg"
+              alt="Sophia sewing"
+              hidden
+              onload="this.hidden=false; this.nextElementSibling.hidden=true;"
+              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+            />
+            <div class="about-photo-placeholder about-photo-placeholder--small">Photo coming soon</div>
+          </figure>
+          <figure class="about-gallery__item">
+            <img
+              src="images/about/sewing-3.jpg"
+              alt="Sophia sewing"
+              hidden
+              onload="this.hidden=false; this.nextElementSibling.hidden=true;"
+              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+            />
+            <div class="about-photo-placeholder about-photo-placeholder--small">Photo coming soon</div>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <a href="index.html">
+          <img
+            class="site-footer__logo"
+            src="images/VISIONStransparentbackground.png"
+            alt="Visions"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/cart-drawer.js"></script>
+  </body>
+</html>

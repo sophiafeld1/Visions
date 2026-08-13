@@ -1,0 +1,18 @@
+{
+  "name": "visions-shop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "db:setup": "node server/setup-db.js",
+    "db:update": "node server/update-inventory.js",
+    "vercel": "vercel",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
+  }
+}
