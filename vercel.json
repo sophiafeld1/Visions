@@ -1,4 +1,5 @@
 {
+  "name": "visions-shop",
   "headers": [
     {
       "source": "/data/products.json",
