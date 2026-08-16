@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -16,11 +16,15 @@
     <div class="page-background" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a class="site-nav-link" href="about.html">About Me</a>
-      <a href="index.html">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav-link" href="home.html">Home</a>
+        <a class="site-nav-link" href="index.html">Shop</a>
+        <a class="site-nav-link" href="about.html">About Me</a>
+      </nav>
+      <a href="home.html">
         <img
           class="site-logo"
-          src="images/VISIONStransparentbackground.png"
+          src="images/logo/visionsstudiostaroveris.png?v=2"
           alt="Visions"
         />
       </a>
@@ -35,16 +39,16 @@
     </header>
 
     <main class="product-page">
-      <a class="back-link" href="index.html">← Back to shop</a>
-
       <article class="product-detail">
-        <div class="product-detail__image-wrap">
-          <img id="product-image" class="product-detail__image" src="" alt="" />
+        <div class="product-detail__gallery">
+          <div id="product-gallery-grid" class="product-gallery-grid"></div>
         </div>
 
-        <div class="product-detail__content">
+        <aside class="product-detail__sidebar">
+          <a class="back-link" href="index.html">← Back to shop</a>
+
+          <h1 id="product-name" class="product-detail__title"></h1>
           <p id="product-price" class="product-detail__price"></p>
-          <p id="product-description" class="product-detail__description"></p>
 
           <div class="product-size-selector">
             <span class="product-size-selector__label">Size</span>
@@ -53,21 +57,105 @@
           </div>
 
           <div class="add-to-cart">
-            <span class="add-to-cart__label">Add to Cart</span>
-            <button id="add-to-cart-btn" class="btn" type="button">Add to Cart</button>
+            <button id="add-to-cart-btn" class="btn btn--full" type="button">Add to Cart</button>
           </div>
-        </div>
+
+          <section class="product-info-tabs product-info-tabs--sidebar" aria-label="Product information">
+            <div class="product-info-tabs__nav" role="tablist">
+              <button
+                class="product-info-tabs__tab product-info-tabs__tab--active"
+                type="button"
+                role="tab"
+                id="product-tab-btn-details"
+                aria-selected="true"
+                aria-controls="product-tab-details"
+                data-tab="details"
+              >
+                Details
+              </button>
+              <button
+                class="product-info-tabs__tab"
+                type="button"
+                role="tab"
+                id="product-tab-btn-measurements"
+                aria-selected="false"
+                aria-controls="product-tab-measurements"
+                data-tab="measurements"
+              >
+                Measurements
+              </button>
+              <button
+                class="product-info-tabs__tab"
+                type="button"
+                role="tab"
+                id="product-tab-btn-care"
+                aria-selected="false"
+                aria-controls="product-tab-care"
+                data-tab="care"
+              >
+                Handling and Care
+              </button>
+            </div>
+
+            <div class="product-info-tabs__panels">
+              <div
+                class="product-info-tabs__panel product-info-tabs__panel--active"
+                id="product-tab-details"
+                role="tabpanel"
+                aria-labelledby="product-tab-btn-details"
+              >
+                <p id="product-description" class="product-info-tabs__text"></p>
+              </div>
+              <div
+                class="product-info-tabs__panel"
+                id="product-tab-measurements"
+                role="tabpanel"
+                aria-labelledby="product-tab-btn-measurements"
+                hidden
+              >
+                <div id="product-measurements" class="product-info-tabs__text"></div>
+              </div>
+              <div
+                class="product-info-tabs__panel"
+                id="product-tab-care"
+                role="tabpanel"
+                aria-labelledby="product-tab-btn-care"
+                hidden
+              >
+                <ul class="product-info-tabs__list">
+                  <li>Wash cold. Lie flat to dry</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </aside>
       </article>
     </main>
 
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <a href="index.html">
+        <a
+          class="site-footer__social"
+          href="https://www.instagram.com/visionssclothing/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @visionssclothing
+        </a>
+        <a class="site-footer__logo-link" href="home.html">
           <img
             class="site-footer__logo"
-            src="images/VISIONStransparentbackground.png"
+            src="images/logo/visionsstudiostaroveris.png?v=2"
             alt="Visions"
           />
+        </a>
+        <a
+          class="site-footer__social"
+          href="https://www.tiktok.com/@visionscreative"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @visionscreative
         </a>
       </div>
     </footer>

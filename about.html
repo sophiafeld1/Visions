@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -16,11 +16,15 @@
     <div class="page-background" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a class="site-nav-link site-nav-link--active" href="about.html">About Me</a>
-      <a href="index.html">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav-link" href="home.html">Home</a>
+        <a class="site-nav-link" href="index.html">Shop</a>
+        <a class="site-nav-link site-nav-link--active" href="about.html">About Me</a>
+      </nav>
+      <a href="home.html">
         <img
           class="site-logo"
-          src="images/VISIONStransparentbackground.png"
+          src="images/logo/visionsstudiostaroveris.png?v=2"
           alt="Visions"
         />
       </a>
@@ -40,59 +44,78 @@
           <h1 class="about-page__greeting">Hi!</h1>
           <div class="about-page__text">
             <p>
-              My name is Sophia. I created VISIONS in 2020, selling corset tops on Depop. I've
+              My name is Sophia. I created Visions in 2020, selling corset tops on Depop. I've
               continued sewing but decided to begin selling my clothing again in 2026 after
               graduating college. I love thrifting and upcycling old clothes, which most of my
-              items are made from.
+              items are made from, making visions susainable, and one-of-a-kind.
             </p>
-            <p class="about-page__thanks">Thank you for supporting visions</p>
+            <p class="about-page__thanks">Thank you for supporting visions!</p>
           </div>
         </div>
 
-        <div class="about-intro__photo">
+        <div class="about-intro__photos">
           <img
-            class="about-headshot"
+            class="about-intro__photo"
             src="images/about/headshot.jpg"
-            alt="Sophia"
-            hidden
-            onload="this.hidden=false; this.nextElementSibling.hidden=true;"
-            onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+            alt="Sophia on a rooftop at sunset"
           />
-          <div class="about-photo-placeholder">Headshot coming soon</div>
+          <img
+            class="about-intro__photo"
+            src="images/about/corset-hanger.jpg"
+            alt="Floral corset top on a hanger"
+          />
         </div>
       </div>
 
-      <section class="about-gallery" aria-label="Photos of Sophia sewing">
+      <section class="about-gallery" aria-label="Visions items on TikTok">
+        <h2 class="about-gallery__title">Visions on Tiktok</h2>
         <div class="about-gallery__grid">
-          <figure class="about-gallery__item">
-            <img
-              src="images/about/sewing-1.jpg"
-              alt="Sophia sewing"
-              hidden
-              onload="this.hidden=false; this.nextElementSibling.hidden=true;"
-              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
-            />
-            <div class="about-photo-placeholder about-photo-placeholder--small">Photo coming soon</div>
+          <figure class="about-gallery__item about-gallery__item--tiktok">
+            <a
+              class="about-gallery__tiktok-link"
+              href="https://www.tiktok.com/t/ZTD6wyG5m/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Watch on TikTok"
+            >
+              <video
+                class="about-gallery__video about-gallery__video--portrait"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                aria-hidden="true"
+              >
+                <source src="images/about/sewing-3.mp4" type="video/mp4" />
+              </video>
+            </a>
           </figure>
           <figure class="about-gallery__item">
-            <img
-              src="images/about/sewing-2.jpg"
-              alt="Sophia sewing"
-              hidden
-              onload="this.hidden=false; this.nextElementSibling.hidden=true;"
-              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
-            />
-            <div class="about-photo-placeholder about-photo-placeholder--small">Photo coming soon</div>
+            <video
+              class="about-gallery__video about-gallery__video--portrait"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-label="Sophia sewing"
+            >
+              <source src="images/about/sewing-1.mp4" type="video/mp4" />
+            </video>
           </figure>
           <figure class="about-gallery__item">
-            <img
-              src="images/about/sewing-3.jpg"
-              alt="Sophia sewing"
-              hidden
-              onload="this.hidden=false; this.nextElementSibling.hidden=true;"
-              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
-            />
-            <div class="about-photo-placeholder about-photo-placeholder--small">Photo coming soon</div>
+            <video
+              class="about-gallery__video about-gallery__video--portrait"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-label="Sophia sewing"
+            >
+              <source src="images/about/sewing-2.mp4" type="video/mp4" />
+            </video>
           </figure>
         </div>
       </section>
@@ -100,12 +123,28 @@
 
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <a href="index.html">
+        <a
+          class="site-footer__social"
+          href="https://www.instagram.com/visionssclothing/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @visionssclothing
+        </a>
+        <a class="site-footer__logo-link" href="home.html">
           <img
             class="site-footer__logo"
-            src="images/VISIONStransparentbackground.png"
+            src="images/logo/visionsstudiostaroveris.png?v=2"
             alt="Visions"
           />
+        </a>
+        <a
+          class="site-footer__social"
+          href="https://www.tiktok.com/@visionscreative"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @visionscreative
         </a>
       </div>
     </footer>

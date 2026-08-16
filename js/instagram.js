@@ -2,6 +2,16 @@ const INSTAGRAM_PROFILE_URL = "https://www.instagram.com/visionssclothing/";
 
 const INSTAGRAM_POSTS = [
   {
+    image: "images/instagram/post-7.jpg?v=1",
+    url: INSTAGRAM_PROFILE_URL,
+    alt: "Black V-neck top and mini skirt",
+  },
+  {
+    image: "images/instagram/post-8.jpg?v=1",
+    url: INSTAGRAM_PROFILE_URL,
+    alt: "Black deep V-neck top and skirt",
+  },
+  {
     image: "images/instagram/post-1.jpg?v=2",
     url: INSTAGRAM_PROFILE_URL,
     alt: "Blue mesh top on model",

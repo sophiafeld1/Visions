@@ -6,51 +6,111 @@
     "colorSwatch": "#1a1a1a",
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 4 }],
-    "price": 48,
-    "image": "images/v-neck-tie-top.jpg",
+    "price": 35,
+    "image": "images/blacktopfront2.jpg",
+    "imageHover": "images/blacktopTIKTOK.mp4",
+    "images": [
+      "images/blacktopfront2.jpg",
+      "images/blacktopTIKTOK.mp4",
+      "images/blacktopaltweartiefront.jpg",
+      "images/blacktoptiealtcrossed.jpg",
+      "images/blacktopback4.jpg",
+      "images/blacktopback5.jpg"
+    ],
     "description": "A relaxed v-neck with a soft tie detail. Lightweight and flattering."
   },
   {
-    "id": "teal skirt low rise foldover",
-    "name": "Teal Skirt Low Rise Foldover",
-    "color": "Teal",
-    "colorSwatch": "#008080",
+    "id": "blue-polka-dot-halter-top",
+    "name": "Blue Polka Dot Halter Top",
+    "color": "Blue",
+    "colorSwatch": "#7eb8c9",
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
-    "price": 48,
-    "image": "images/teal-skirt-low-rise-foldover.jpg",
-    "description": "A low rise foldover skirt in teal. Foldvever waistband with a white button. Lightweight and stretchy material."
+    "price": 30,
+    "image": "images/bluepolkafront2.jpg",
+    "imageHover": "images/polkablueback.jpg",
+    "images": [
+      "images/bluepolkafront2.jpg",
+      "images/IMG_9602.jpg",
+      "images/bluepolkaside.jpg",
+      "images/bluepolkaside2.jpg",
+      "images/polkablueback.jpg"
+    ],
+    "description": "Light blue polka dot halter top with a draped cowl neckline and open back."
   },
   {
-    "id": "Off the shoulder baggy red Polka dot top red and white with buttons",
-    "name": "Off the shoulder baggy red Polka dot top red and white with buttons",
+    "id": "blue-polka-dot-two-piece-halter-top",
+    "name": "Blue Polka Dot Two Piece Halter Top",
+    "color": "Blue",
+    "colorSwatch": "#7eb8c9",
+    "sizes": ["XS"],
+    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "price": 30,
+    "image": "images/2pcbluetopfront.jpg",
+    "images": [
+      "images/2pcbluetopfront.jpg"
+    ],
+    "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl overlay."
+  },
+  {
+    "id": "off-shoulder-red-polka-dot-top",
+    "name": "Off the Shoulder Red Polka Dot Top",
     "color": "Red",
     "colorSwatch": "#ff0000",
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 48,
-    "image": "images/off-the-shoulder-baggy-red-polka-dot-top-red-and-white-with-buttons.jpg",
-    "description": "A off the shoulder baggy red Polka dot top red and white with buttons."
+    "image": "images/redpolkafront.jpg",
+    "imageHover": "images/redpolkaside.jpg",
+    "images": [
+      "images/redpolkafront.jpg",
+      "images/redpolkaside.jpg",
+      "images/redpolkaside2.jpg"
+    ],
+    "description": "An off-the-shoulder baggy red polka dot top in red and white with buttons."
   },
   {
-    "id": "Yellow grommet tank top with grommet headband, cotton",
-    "name": "Yellow grommet tank top with grommet headband, cotton",
+    "id": "yellow-grommet-tank-headband",
+    "name": "Yellow Grommet Tank Top with Headband",
     "color": "Yellow",
-    "colorSwatch": "#ffff00",
+    "colorSwatch": "#f5d547",
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 70,
-    "image": "images/yellow-grommet-tank-top-with-grommet-headband-cotton.jpg",
-    "description": "A yellow grommet tank top with grommet headband, cotton."
+    "image": "images/yellowtopfront.jpg",
+    "imageHover": "images/IMG_9607.jpg",
+    "images": [
+      "images/yellowtopfront.jpg",
+      "images/IMG_9607.jpg"
+    ],
+    "description": "A yellow grommet tank top with matching grommet headband, made from cotton."
   },
-  { "id": "Sparkly off slouchy wide neck baggy top ",
-    "name": "Sparkly off slouchy wide neck baggy top ",
-    "color": "grey and black and white and silver",
-    "colorSwatch": "#0000ff",
+  {
+    "id": "sparkly-slouchy-wide-neck-top",
+    "name": "Sparkly Slouchy Wide Neck Top",
+    "color": "Grey",
+    "colorSwatch": "#8a8a8a",
     "sizes": ["S"],
-    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "inventory": [{ "size": "S", "quantity": 1 }],
     "price": 48,
-    "image": "images/blue-grommet-tank-top-with-grommet-headband-cotton.jpg",
-    "description": "A sparkly off slouchy wide neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom."
+    "image": "images/sparkletopfront.jpg",
+    "imageHover": "images/sparkletopback.jpg",
+    "images": [
+      "images/sparkletopfront.jpg",
+      "images/sparkletopfront2.jpg",
+      "images/sparkletopback.jpg"
+    ],
+    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom."
+  },
+  {
+    "id": "teal-skirt-low-rise-foldover",
+    "name": "Teal Skirt Low Rise Foldover",
+    "color": "Teal",
+    "colorSwatch": "#008080",
+    "sizes": ["XS"],
+    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "price": 60,
+    "image": "images/teal-skirt-low-rise-foldover.jpg",
+    "description": "A low rise foldover skirt in teal. Foldover waistband with a white button. Lightweight and stretchy material."
   }
 ]

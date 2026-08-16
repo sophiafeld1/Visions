@@ -14,6 +14,10 @@ const STATIC_PRODUCTS = [
 
 let PRODUCTS = [...STATIC_PRODUCTS];
 
+function isVideoSrc(src) {
+  return /\.(mp4|webm|mov)(\?|$)/i.test(src);
+}
+
 function getProductById(id) {
   return PRODUCTS.find((product) => product.id === id);
 }
@@ -29,6 +33,21 @@ function getAvailableSizes(product) {
   return (product.inventory || [])
     .filter((entry) => entry.quantity > 0)
     .map((entry) => entry.size);
+}
+
+function getProductImages(product) {
+  if (!product) return [];
+
+  if (product.images?.length) {
+    return [...new Set(product.images)];
+  }
+
+  const images = [product.image];
+  if (product.imageHover && product.imageHover !== product.image) {
+    images.push(product.imageHover);
+  }
+
+  return images;
 }
 
 async function loadProductsFromApi() {
