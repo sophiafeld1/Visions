@@ -1,11 +1,5 @@
 {
   "name": "visions-shop",
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/home.html"
-    }
-  ],
   "headers": [
     {
       "source": "/data/products.json",
