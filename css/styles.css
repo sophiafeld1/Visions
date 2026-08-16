@@ -121,7 +121,7 @@ body {
 
 .site-nav-link {
   font-family: var(--font-accent);
-  font-size: 0.72rem;
+  font-size: 0.84rem;
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -132,6 +132,30 @@ body {
 
 .site-nav-link:hover,
 .site-nav-link--active {
+  color: var(--color-text);
+}
+
+.site-header__socials {
+  position: absolute;
+  right: var(--page-padding);
+  display: flex;
+  align-items: center;
+  gap: clamp(0.85rem, 2vw, 1.35rem);
+}
+
+.site-header__social {
+  font-family: var(--font-accent);
+  font-size: 0.84rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.site-header__social:hover {
   color: var(--color-text);
 }
 
@@ -1315,6 +1339,17 @@ body.cart-drawer-open {
   background: #ffffff;
 }
 
+.landing-hero__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.landing-hero__link:hover {
+  opacity: 0.96;
+}
+
 .landing-hero__media {
   width: 100%;
   overflow: hidden;
@@ -1332,11 +1367,24 @@ body.cart-drawer-open {
   object-fit: cover;
   object-position: left center;
   background: #ffffff;
+  pointer-events: none;
+}
+
+.landing-hero__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(6rem, 14vh, 10rem);
+  padding: clamp(2.5rem, 6vw, 4rem) var(--page-padding);
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .landing-hero__caption {
   margin: 0;
-  padding: clamp(1.25rem, 3vw, 2rem) var(--page-padding) 0;
+  padding: 0;
   font-family: var(--font-display);
   font-size: clamp(1.875rem, 4.5vw, 3rem);
   font-weight: 600;

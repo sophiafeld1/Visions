@@ -25,25 +25,53 @@
           alt="Visions Studio"
         />
       </a>
+      <div class="site-header__socials">
+        <a
+          class="site-header__social"
+          href="https://www.instagram.com/visionssclothing/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <a
+          class="site-header__social"
+          href="https://www.tiktok.com/@visionscreative"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok
+        </a>
+      </div>
     </header>
 
     <main class="landing-main">
       <section class="landing-hero" aria-label="Visions Studio hero">
-        <div class="landing-hero__media">
-          <video
-            id="landing-hero-video"
-            class="landing-hero__video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            aria-label="Visions Studio animation"
-          >
-            <source src="images/home/hero-animation-hero.mp4?v=5" type="video/mp4" />
-          </video>
+        <a
+          class="landing-hero__link"
+          href="https://www.instagram.com/visionssclothing/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Visions on Instagram"
+        >
+          <div class="landing-hero__media">
+            <video
+              id="landing-hero-video"
+              class="landing-hero__video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-hidden="true"
+            >
+              <source src="images/home/hero-animation-hero.mp4?v=5" type="video/mp4" />
+            </video>
+          </div>
+        </a>
+        <div class="landing-hero__banner">
+          <p class="landing-hero__caption">Shop Coming Soon</p>
         </div>
-        <p class="landing-hero__caption">Shop Coming Soon</p>
       </section>
     </main>
 
