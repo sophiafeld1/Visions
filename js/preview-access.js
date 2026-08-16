@@ -1,7 +1,7 @@
 (function () {
   const STORAGE_KEY = "visions-preview-access";
   const PASSWORD = "supersecretaccess";
-  const SHOP_URL = "index.html";
+  const SHOP_URL = "shop.html";
 
   function hasAccess() {
     try {
@@ -24,7 +24,7 @@
       return;
     }
 
-    window.location.replace(redirectTo || "home.html");
+    window.location.replace(redirectTo || "index.html");
   }
 
   function initUnlockForm() {

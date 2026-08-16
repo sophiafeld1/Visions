@@ -90,7 +90,7 @@ async function loadProductPage() {
   const productId = params.get("id");
 
   if (!productId) {
-    window.location.href = "index.html";
+    window.location.href = "shop.html";
     return;
   }
 
@@ -98,7 +98,7 @@ async function loadProductPage() {
   const product = getProductById(productId);
 
   if (!product) {
-    window.location.href = "index.html";
+    window.location.href = "shop.html";
     return;
   }
 
