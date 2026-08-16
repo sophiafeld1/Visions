@@ -73,6 +73,23 @@
           <p class="landing-hero__caption">Shop Coming Soon</p>
         </div>
       </section>
+
+      <section class="preview-access-bar" aria-label="Preview access">
+        <form id="preview-access-form" class="preview-access-bar__form">
+          <label class="preview-access-bar__label" for="preview-access-password">Preview access</label>
+          <div class="preview-access-bar__controls">
+            <input
+              type="password"
+              id="preview-access-password"
+              class="preview-access-bar__input"
+              autocomplete="current-password"
+              placeholder="Password"
+            />
+            <button type="submit" class="preview-access-bar__button">Enter</button>
+          </div>
+          <p id="preview-access-error" class="preview-access-bar__error" hidden>Incorrect password</p>
+        </form>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -103,6 +120,10 @@
       </div>
     </footer>
 
+    <script src="js/preview-access.js"></script>
     <script src="js/home-landing.js"></script>
+    <script>
+      PreviewAccess.initUnlockForm();
+    </script>
   </body>
 </html>

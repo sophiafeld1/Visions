@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visions Studio</title>
+    <title>Visions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,69 +11,75 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/preview-access.js"></script>
+    <script>
+      PreviewAccess.requireAccess("home.html");
+    </script>
   </head>
-  <body class="landing-page">
+  <body>
+    <div class="page-background" aria-hidden="true"></div>
+
     <header class="site-header">
       <nav class="site-nav" aria-label="Primary">
-        <a class="site-nav-link site-nav-link--active" href="index.html">Home</a>
+        <a class="site-nav-link" href="home.html">Home</a>
+        <a class="site-nav-link site-nav-link--active" href="index.html">Shop</a>
         <a class="site-nav-link" href="about.html">About Me</a>
       </nav>
-      <a href="index.html">
+      <a href="home.html">
         <img
           class="site-logo"
           src="images/logo/visionsstudiostaroveris.png?v=2"
-          alt="Visions Studio"
+          alt="Visions"
         />
       </a>
-      <div class="site-header__socials">
-        <a
-          class="site-header__social"
-          href="https://www.instagram.com/visionssclothing/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-        <a
-          class="site-header__social"
-          href="https://www.tiktok.com/@visionscreative"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          TikTok
-        </a>
-      </div>
+      <button type="button" class="cart-button" id="cart-open-btn" aria-label="View cart">
+        <svg class="cart-button__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM6.3 6h14.7l-1.4 7.2a1 1 0 0 1-1 .8H8.8a1 1 0 0 1-1-.9L6.3 6Zm-.8-2a1 1 0 0 1 1-1h1.6a1 1 0 0 1 .98.8L9.4 6H19a1 1 0 0 1 .98 1.17l-1.5 7.5a3 3 0 0 1-2.94 2.33H8.4a3 3 0 0 1-2.94-2.4L3.1 4.8A1 1 0 0 1 4.1 4h1.4Z"
+          />
+        </svg>
+        <span id="cart-count" class="cart-button__count" hidden>0</span>
+      </button>
     </header>
 
-    <main class="landing-main">
-      <section class="landing-hero" aria-label="Visions Studio hero">
+    <main>
+      <h1 class="section-label">Shop</h1>
+      <div id="shop-grid" class="shop-grid" aria-live="polite"></div>
+    </main>
+
+    <section class="instagram-section" aria-labelledby="instagram-heading">
+      <div class="instagram-section__header">
+        <h2 id="instagram-heading" class="instagram-section__title">
+          <em>Instagram</em>
+        </h2>
         <a
-          class="landing-hero__link"
+          class="instagram-section__link"
           href="https://www.instagram.com/visionssclothing/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit Visions on Instagram"
         >
-          <div class="landing-hero__media">
-            <video
-              id="landing-hero-video"
-              class="landing-hero__video"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="auto"
-              aria-hidden="true"
-            >
-              <source src="images/home/hero-animation-hero.mp4?v=5" type="video/mp4" />
-            </video>
-          </div>
+          @visionssclothing
         </a>
-        <div class="landing-hero__banner">
-          <p class="landing-hero__caption">Shop Coming Soon</p>
-        </div>
-      </section>
-    </main>
+      </div>
+
+      <div class="instagram-carousel">
+        <button
+          class="instagram-carousel__nav instagram-carousel__nav--prev"
+          type="button"
+          aria-label="Scroll Instagram photos left"
+        >
+          ‹
+        </button>
+        <div id="instagram-track" class="instagram-carousel__track"></div>
+        <button
+          class="instagram-carousel__nav instagram-carousel__nav--next"
+          type="button"
+          aria-label="Scroll Instagram photos right"
+        >
+          ›
+        </button>
+      </div>
+    </section>
 
     <footer class="site-footer">
       <div class="site-footer__inner">
@@ -85,11 +91,11 @@
         >
           @visionssclothing
         </a>
-        <a class="site-footer__logo-link" href="index.html">
+        <a class="site-footer__logo-link" href="home.html">
           <img
             class="site-footer__logo"
             src="images/logo/visionsstudiostaroveris.png?v=2"
-            alt="Visions Studio"
+            alt="Visions"
           />
         </a>
         <a
@@ -103,6 +109,11 @@
       </div>
     </footer>
 
-    <script src="js/home-landing.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/cart-drawer.js"></script>
+    <script src="js/instagram.js"></script>
+    <script src="js/instagram-carousel.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>

@@ -1426,6 +1426,78 @@ body.cart-drawer-open {
   color: #ffffff;
 }
 
+.preview-access-bar {
+  border-top: 1px solid var(--color-border);
+  background: #fafafa;
+  padding: clamp(1.25rem, 3vw, 1.75rem) var(--page-padding);
+}
+
+.preview-access-bar__form {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.preview-access-bar__label {
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.preview-access-bar__controls {
+  display: flex;
+  align-items: stretch;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.preview-access-bar__input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: #ffffff;
+}
+
+.preview-access-bar__input:focus {
+  outline: none;
+  border-color: var(--color-text);
+}
+
+.preview-access-bar__button {
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--color-text);
+  border-radius: 999px;
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.preview-access-bar__button:hover {
+  background: var(--color-text);
+  color: #ffffff;
+}
+
+.preview-access-bar__error {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #9b3049;
+}
+
 @media (max-width: 720px) {
   :root {
     --header-height: auto;
@@ -1496,6 +1568,14 @@ body.cart-drawer-open {
 
   .landing-hero__caption {
     font-size: clamp(1.5rem, 7vw, 2.35rem);
+  }
+
+  .preview-access-bar__controls {
+    flex-direction: column;
+  }
+
+  .preview-access-bar__button {
+    width: 100%;
   }
 
   .about-intro {
