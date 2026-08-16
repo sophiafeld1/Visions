@@ -1316,6 +1316,7 @@ body.cart-drawer-open {
 }
 
 .landing-hero__media {
+  position: relative;
   width: 100%;
   overflow: hidden;
   line-height: 0;
@@ -1332,6 +1333,19 @@ body.cart-drawer-open {
   object-fit: cover;
   object-position: left center;
   background: #ffffff;
+}
+
+.landing-hero__shop {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 2.25rem);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.landing-hero__shop:hover {
+  background: var(--color-text);
 }
 
 .landing-hero__caption {
@@ -1374,6 +1388,17 @@ body.cart-drawer-open {
 }
 
 .landing-cta:hover {
+  background: var(--color-text);
+  color: #ffffff;
+}
+
+.landing-hero__shop.landing-cta {
+  padding: 1.35rem 3.5rem;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  letter-spacing: 0.18em;
+}
+
+.landing-hero__shop.landing-cta:hover {
   background: var(--color-text);
   color: #ffffff;
 }
