@@ -4,7 +4,7 @@
     "name": "The Multiwear Tie Top in Black",
     "color": "Black",
     "colorSwatch": "#1a1a1a",
-    "sizes": ["XS"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "XS", "quantity": 4 }],
     "price": 35,
     "image": "images/blacktopfront2.jpg",
@@ -50,14 +50,14 @@
     "images": [
       "images/2pcbluetopfront.jpg"
     ],
-    "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl overlay."
+    "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck."
   },
   {
     "id": "off-shoulder-red-polka-dot-top",
     "name": "Ruby Off-Shoulder Top in Red Polka",
     "color": "Red",
     "colorSwatch": "#ff0000",
-    "sizes": ["XS"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 48,
     "image": "images/red-polka/front.jpg",
@@ -76,7 +76,7 @@
     "name": "The Grommet Set in Butter",
     "color": "Yellow",
     "colorSwatch": "#f5d547",
-    "sizes": ["XS"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 70,
     "image": "images/yellowtopfront.jpg",
@@ -92,7 +92,7 @@
     "name": "The Slouch Top in Grey Sparkle",
     "color": "Grey",
     "colorSwatch": "#8a8a8a",
-    "sizes": ["S"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "S", "quantity": 1 }],
     "price": 48,
     "image": "images/sparkletopfront.jpg",
@@ -109,9 +109,9 @@
     "name": "Cleo Foldover Skirt in Aqua",
     "color": "Teal",
     "colorSwatch": "#008080",
-    "sizes": ["XS"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
-    "price": 60,
+    "price": 50,
     "image": "images/teal-skirt/front.jpg",
     "imageHover": "images/teal-skirt/detail.jpg",
     "images": [
@@ -126,7 +126,7 @@
     "name": "The Asymmetric Top in Sage",
     "color": "Sage",
     "colorSwatch": "#9CAF88",
-    "sizes": ["XS"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 40,
     "image": "images/asymmetric-top/front.jpg",
@@ -142,7 +142,7 @@
     "name": "The Peplum Top in Aqua",
     "color": "Aqua",
     "colorSwatch": "#7eb8c9",
-    "sizes": ["XS"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 40,
     "image": "images/peplum-top/front.jpg",
@@ -156,12 +156,12 @@
   },
   {
     "id": "stripe-set-blush",
-    "name": "The Stripe Set in Blush",
+    "name": "The Striped Boloro and Lace Tube Set in Blush and White",
     "color": "Blush",
     "colorSwatch": "#f4c2c2",
-    "sizes": ["XS"],
+    "sizes": ["XS/S"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
-    "price": 45,
+    "price": 60,
     "image": "images/stripe-set/front.jpg",
     "imageHover": "images/stripe-set/vneck.jpg",
     "images": [
@@ -170,11 +170,11 @@
       "images/stripe-set/vneck-alt.jpg",
       "images/stripe-set/scoop.jpg"
     ],
-    "description": "A pink and white striped set with a lace-trim tube top and matching shrug. Also shown styled as a V-neck and scoop crop."
+    "description": "A pink and white striped set with a lace-trim blush pink and whte stripe tube top and matching boloro with buttons."
   },
   {
     "id": "pink-lace-bikini-lime",
-    "name": "The Pink Lace Bikini in Lime",
+    "name": "The Picot Lace Bikini in Lime",
     "color": "Lime",
     "colorSwatch": "#c5e86c",
     "sizes": ["XS"],
@@ -189,6 +189,6 @@
       "images/lime-bikini/set-alt2.jpg",
       "images/lime-bikini/top-alt.jpg"
     ],
-    "description": "A lime green triangle bikini with pink lace trim. Tie-side bottoms and adjustable top straps."
+    "description": "A lime green triangle bikini with pink lace trim. Tie-side bottoms and tie top. Lined with elastic for support. Swimsuit material suitable for swimming."
   }
 ]
