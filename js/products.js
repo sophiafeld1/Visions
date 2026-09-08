@@ -6,7 +6,7 @@ const STATIC_PRODUCTS = [
     colorSwatch: "#1a1a1a",
     sizes: ["XS"],
     inventory: [{ size: "XS", quantity: 4 }],
-    price: 48,
+    price: 35,
     image: "images/v-neck-tie-top.jpg",
     description: "A relaxed v-neck with a soft tie detail. Lightweight and flattering.",
   },
