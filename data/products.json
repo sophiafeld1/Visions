@@ -60,13 +60,13 @@
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
     "price": 48,
-    "image": "images/red-polka/model-front.jpg",
-    "imageHover": "images/red-polka/front.jpg",
+    "image": "images/red-polka/model-front.jpg?v=2",
+    "imageHover": "images/red-polka/front.jpg?v=2",
     "images": [
-      "images/red-polka/model-front.jpg",
-      "images/red-polka/front.jpg",
-      "images/red-polka/tag-detail.jpg",
-      "images/red-polka/model-back.jpg"
+      "images/red-polka/model-front.jpg?v=2",
+      "images/red-polka/front.jpg?v=2",
+      "images/red-polka/tag-detail.jpg?v=2",
+      "images/red-polka/model-back.jpg?v=2"
     ],
     "description": "Off-the-shoulder baggy red polka dot top in red and white with buttons on the sleeves."
   },
@@ -117,7 +117,7 @@
       "images/teal-skirt/front.jpg",
       "images/teal-skirt/alt-front.jpg",
       "images/teal-skirt/detail.jpg",
-      "images/teal-skirt/video.mov"
+      "images/teal-skirt/video.mov?v=2"
     ],
     "description": "A low rise foldover skirt in teal. Foldover waistband with a white button. Lightweight and stretchy material."
   },
