@@ -14,7 +14,7 @@
       "images/blacktopTIKTOK.mp4",
       "images/blacktopaltweartiefront.jpg",
       "images/blacktoptiealtcrossed.jpg",
-      "images/blacktopback4.jpg",
+      "images/blacktiebackUSE.jpg",
       "images/blacktopback5.jpg"
     ],
     "description": "A relaxed v-neck with a soft tie detail. Lightweight and flattering."
@@ -26,15 +26,15 @@
     "colorSwatch": "#7eb8c9",
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
-    "price": 30,
-    "image": "images/bluepolkafront2.jpg",
-    "imageHover": "images/polkablueback.jpg",
+    "price": 29,
+    "image": "images/bluepolkafront2.jpg?v=4",
+    "imageHover": "images/polkablueback.jpg?v=4",
     "images": [
-      "images/bluepolkafront2.jpg",
-      "images/IMG_9602.jpg",
-      "images/bluepolkaside.jpg",
-      "images/bluepolkaside2.jpg",
-      "images/polkablueback.jpg"
+      "images/bluepolkafront2.jpg?v=4",
+      "images/IMG_9602.jpg?v=4",
+      "images/bluepolkaside.jpg?v=4",
+      "images/bluepolkaside2.jpg?v=4",
+      "images/polkablueback.jpg?v=4"
     ],
     "description": "Light blue polka dot halter top with a draped cowl neckline and open back."
   },
@@ -45,10 +45,10 @@
     "colorSwatch": "#7eb8c9",
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
-    "price": 30,
-    "image": "images/2pcbluetopfront.jpg",
+    "price": 29,
+    "image": "images/2pcbluetopfront.jpg?v=4",
     "images": [
-      "images/2pcbluetopfront.jpg"
+      "images/2pcbluetopfront.jpg?v=4"
     ],
     "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck."
   },
@@ -59,30 +59,30 @@
     "colorSwatch": "#ff0000",
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
-    "price": 48,
+    "price": 39,
     "image": "images/red-polka/model-front.jpg?v=3",
-    "imageHover": "images/red-polka/front.jpg?v=2",
+    "imageHover": "images/red-polka/front.jpg?v=4",
     "images": [
       "images/red-polka/model-front.jpg?v=3",
-      "images/red-polka/front.jpg?v=2",
-      "images/red-polka/tag-detail.jpg?v=2",
+      "images/red-polka/front.jpg?v=4",
+      "images/red-polka/tag-detail.jpg?v=4",
       "images/red-polka/model-back.jpg?v=2"
     ],
     "description": "Off-the-shoulder baggy red polka dot top in red and white with buttons on the sleeves."
   },
   {
     "id": "yellow-grommet-tank-headband",
-    "name": "The Grommet Set in Butter",
+    "name": "The Grommet Tank Set in Butter",
     "color": "Yellow",
     "colorSwatch": "#f5d547",
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
     "price": 70,
-    "image": "images/yellowtopfront.jpg",
-    "imageHover": "images/IMG_9607.jpg",
+    "image": "images/yellowtopfront.jpg?v=4",
+    "imageHover": "images/IMG_9607.jpg?v=4",
     "images": [
-      "images/yellowtopfront.jpg",
-      "images/IMG_9607.jpg"
+      "images/yellowtopfront.jpg?v=4",
+      "images/IMG_9607.jpg?v=4"
     ],
     "description": "A yellow tank top with grommets along the top and a matching grommet headband. Fitted look with spagetti straps. made from 100% cotton."
   },
@@ -93,13 +93,13 @@
     "colorSwatch": "#8a8a8a",
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
-    "price": 48,
-    "image": "images/sparkletopfront.jpg",
-    "imageHover": "images/sparkletopback.jpg",
+    "price": 29,
+    "image": "images/sparkletopfront.jpg?v=4",
+    "imageHover": "images/sparkletopback.jpg?v=4",
     "images": [
-      "images/sparkletopfront.jpg",
-      "images/sparkletopfront2.jpg",
-      "images/sparkletopback.jpg"
+      "images/sparkletopfront.jpg?v=4",
+      "images/sparkletopfront2.jpg?v=4",
+      "images/sparkletopback.jpg?v=4"
     ],
     "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom."
   },
@@ -111,11 +111,11 @@
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
     "price": 50,
-    "image": "images/teal-skirt/front.jpg",
+    "image": "images/teal-skirt/front.jpg?v=4",
     "imageHover": "images/teal-skirt/detail.jpg",
     "images": [
-      "images/teal-skirt/front.jpg",
-      "images/teal-skirt/alt-front.jpg",
+      "images/teal-skirt/front.jpg?v=4",
+      "images/teal-skirt/alt-front.jpg?v=4",
       "images/teal-skirt/detail.jpg",
       "images/teal-skirt/video.mov?v=2"
     ],
@@ -123,36 +123,36 @@
   },
   {
     "id": "asymmetric-top-sage",
-    "name": "The Asymmetric Top in Sage",
-    "color": "Sage",
+    "name": "The Asymmetric Top in Aqua",
+    "color": "Blue",
     "colorSwatch": "#9CAF88",
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
-    "price": 40,
-    "image": "images/asymmetric-top/front.jpg",
+    "price": 39,
+    "image": "images/asymmetric-top/front.jpg?v=4",
     "imageHover": "images/asymmetric-top/detail.jpg",
     "images": [
-      "images/asymmetric-top/front.jpg",
+      "images/asymmetric-top/front.jpg?v=4",
       "images/asymmetric-top/detail.jpg"
     ],
     "description": "A one-shoulder top in sage green with a long tie strap. Soft ribbed knit with an asymmetric neckline."
   },
   {
     "id": "peplum-top-aqua",
-    "name": "The Peplum Top in Aqua",
-    "color": "Aqua",
+    "name": "The Peplum V Neck Crossover Top in Aqua",
+    "color": "Blue",
     "colorSwatch": "#7eb8c9",
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
-    "price": 40,
-    "image": "images/peplum-top/front.jpg",
-    "imageHover": "images/peplum-top/front-alt.jpg",
+    "price": 39,
+    "image": "images/peplum-top/front.jpg?v=4",
+    "imageHover": "images/peplum-top/front-alt.jpg?v=4",
     "images": [
-      "images/peplum-top/front.jpg",
-      "images/peplum-top/front-alt.jpg",
-      "images/peplum-top/back.jpg"
+      "images/peplum-top/front.jpg?v=4",
+      "images/peplum-top/front-alt.jpg?v=4",
+      "images/peplum-top/back.jpg?v=4"
     ],
-    "description": "A light blue wrap-front top with a gathered peplum hem. Sleeveless with a soft surplice neckline."
+    "description": "A light blue wrap-front top with a gathered peplum hem. V neck crossover top."
   },
   {
     "id": "stripe-set-blush",
@@ -162,13 +162,13 @@
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
     "price": 60,
-    "image": "images/stripe-set/vneck.jpg",
-    "imageHover": "images/stripe-set/front.jpg",
+    "image": "images/stripe-set/vneck.jpg?v=4",
+    "imageHover": "images/stripe-set/front.jpg?v=4",
     "images": [
-      "images/stripe-set/vneck.jpg",
-      "images/stripe-set/front.jpg",
-      "images/stripe-set/vneck-alt.jpg",
-      "images/stripe-set/scoop.jpg"
+      "images/stripe-set/vneck.jpg?v=4",
+      "images/stripe-set/front.jpg?v=4",
+      "images/stripe-set/vneck-alt.jpg?v=4",
+      "images/stripe-set/scoop.jpg?v=4"
     ],
     "description": "A pink and white striped set with a lace-trim blush pink and whte stripe tube top and matching boloro with buttons."
   },
@@ -179,15 +179,15 @@
     "colorSwatch": "#c5e86c",
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
-    "price": 45,
-    "image": "images/lime-bikini/set-alt.jpg",
-    "imageHover": "images/lime-bikini/front.jpg",
+    "price": 65,
+    "image": "images/lime-bikini/set-alt.jpg?v=4",
+    "imageHover": "images/lime-bikini/front.jpg?v=4",
     "images": [
-      "images/lime-bikini/set-alt.jpg",
-      "images/lime-bikini/front.jpg",
-      "images/lime-bikini/set-alt2.jpg",
-      "images/lime-bikini/top.jpg",
-      "images/lime-bikini/top-alt.jpg"
+      "images/lime-bikini/set-alt.jpg?v=4",
+      "images/lime-bikini/front.jpg?v=4",
+      "images/lime-bikini/set-alt2.jpg?v=4",
+      "images/lime-bikini/top.jpg?v=4",
+      "images/lime-bikini/top-alt.jpg?v=4"
     ],
     "description": "A lime green triangle bikini with pink lace trim. Tie-side bottoms and tie top. Lined with elastic for support. Swimsuit material suitable for swimming."
   }
