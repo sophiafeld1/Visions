@@ -39,6 +39,10 @@ FLAT_LAY_FILES = [
     "sparkletopfront.jpg",
     "sparkletopfront2.jpg",
     "sparkletopback.jpg",
+    "blue-polka/front.jpg",
+    "blue-polka/back.jpg",
+    "sparkle-top/front.jpg",
+    "sparkle-top/back.jpg",
     "redpolkafront.jpg",
 ]
 

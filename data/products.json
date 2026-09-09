@@ -46,9 +46,12 @@
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 29,
-    "image": "images/2pcbluetopfront.jpg?v=4",
+    "image": "images/2pcbluetopfront.jpg?v=5",
+    "imageHover": "images/blue-polka/front.jpg?v=1",
     "images": [
-      "images/2pcbluetopfront.jpg?v=4"
+      "images/2pcbluetopfront.jpg?v=5",
+      "images/blue-polka/front.jpg?v=1",
+      "images/blue-polka/back.jpg?v=1"
     ],
     "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck."
   },
@@ -94,10 +97,12 @@
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
     "price": 29,
-    "image": "images/sparkletopfront.jpg?v=4",
-    "imageHover": "images/sparkletopback.jpg?v=4",
+    "image": "images/sparkletopfront.jpg?v=5",
+    "imageHover": "images/sparkle-top/front.jpg?v=1",
     "images": [
-      "images/sparkletopfront.jpg?v=4",
+      "images/sparkletopfront.jpg?v=5",
+      "images/sparkle-top/front.jpg?v=1",
+      "images/sparkle-top/back.jpg?v=1",
       "images/sparkletopfront2.jpg?v=4",
       "images/sparkletopback.jpg?v=4"
     ],
