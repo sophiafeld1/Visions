@@ -60,10 +60,10 @@
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 1 }],
     "price": 48,
-    "image": "images/red-polka/model-front.jpg?v=2",
+    "image": "images/red-polka/model-front.jpg?v=3",
     "imageHover": "images/red-polka/front.jpg?v=2",
     "images": [
-      "images/red-polka/model-front.jpg?v=2",
+      "images/red-polka/model-front.jpg?v=3",
       "images/red-polka/front.jpg?v=2",
       "images/red-polka/tag-detail.jpg?v=2",
       "images/red-polka/model-back.jpg?v=2"
