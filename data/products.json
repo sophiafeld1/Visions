@@ -4,8 +4,15 @@
     "name": "The Multiwear Tie Top in Black",
     "color": "Black",
     "colorSwatch": "#1a1a1a",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 4 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 4
+      }
+    ],
     "price": 35,
     "price_id": "price_1U4QQtBN7SXhPCp6Do9EgqYB",
     "image": "images/v-neck-tie-top/worn-front.jpg",
@@ -18,15 +25,23 @@
       "images/blacktiebackUSE.jpg",
       "images/blacktopback5.jpg"
     ],
-    "description": "A relaxed v-neck with a soft tie detail. Lightweight and flattering."
+    "description": "A relaxed v-neck with a soft tie detail. Lightweight and flattering.",
+    "test_price_id": "price_1UDpTCBN7SXhPCp6VV7TwRyD"
   },
   {
     "id": "blue-polka-dot-halter-top",
     "name": "The Polka Cowl Top in Sky Blue",
     "color": "Blue",
     "colorSwatch": "#7eb8c9",
-    "sizes": ["XS"],
-    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "sizes": [
+      "XS"
+    ],
+    "inventory": [
+      {
+        "size": "XS",
+        "quantity": 1
+      }
+    ],
     "price": 29,
     "price_id": "price_1UDZLWBN7SXhPCp6yKbmzVud",
     "image": "images/bluepolkafront2.jpg?v=4",
@@ -38,15 +53,23 @@
       "images/bluepolkaside2.jpg?v=4",
       "images/polkablueback.jpg?v=4"
     ],
-    "description": "Light blue polka dot halter top with a draped cowl neckline and open back."
+    "description": "Light blue polka dot halter top with a draped cowl neckline and open back.",
+    "test_price_id": "price_1UDpTDBN7SXhPCp6iGFHRloE"
   },
   {
     "id": "blue-polka-dot-two-piece-halter-top",
     "name": "The Buckle Halter Set in Sky Blue",
     "color": "Blue",
     "colorSwatch": "#7eb8c9",
-    "sizes": ["XS"],
-    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "sizes": [
+      "XS"
+    ],
+    "inventory": [
+      {
+        "size": "XS",
+        "quantity": 1
+      }
+    ],
     "price": 29,
     "price_id": "price_1UDZMUBN7SXhPCp6mQSRJfvH",
     "image": "images/2pcbluetopfront.jpg?v=5",
@@ -56,17 +79,25 @@
       "images/blue-polka/front.jpg?v=1",
       "images/blue-polka/back.jpg?v=1"
     ],
-    "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck."
+    "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck.",
+    "test_price_id": "price_1UDpTDBN7SXhPCp6qlvtPMLp"
   },
   {
     "id": "off-shoulder-red-polka-dot-top",
     "name": "Ruby Off-Shoulder Top in Red Polka",
     "color": "Red",
     "colorSwatch": "#ff0000",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 1 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
     "price": 39,
-    "price_id":"price_1UDZNYBN7SXhPCp6jDT4y9KK",
+    "price_id": "price_1UDZNYBN7SXhPCp6jDT4y9KK",
     "image": "images/red-polka/model-front.jpg?v=3",
     "imageHover": "images/red-polka/front.jpg?v=4",
     "images": [
@@ -75,15 +106,23 @@
       "images/red-polka/tag-detail.jpg?v=4",
       "images/red-polka/model-back.jpg?v=2"
     ],
-    "description": "Off-the-shoulder baggy red polka dot top in red and white with buttons on the sleeves."
+    "description": "Off-the-shoulder baggy red polka dot top in red and white with buttons on the sleeves.",
+    "test_price_id": "price_1UDpTDBN7SXhPCp6DTHDReVG"
   },
   {
     "id": "yellow-grommet-tank-headband",
     "name": "The Grommet Tank Set in Butter",
     "color": "Yellow",
     "colorSwatch": "#f5d547",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 1 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
     "price": 70,
     "price_id": "price_1UDZPhBN7SXhPCp6oejODYNG",
     "image": "images/yellowtopfront.jpg?v=4",
@@ -92,17 +131,25 @@
       "images/yellowtopfront.jpg?v=4",
       "images/IMG_9607.jpg?v=4"
     ],
-    "description": "A yellow tank top with grommets along the top and a matching grommet headband. Fitted look with spagetti straps. made from 100% cotton."
+    "description": "A yellow tank top with grommets along the top and a matching grommet headband. Fitted look with spagetti straps. made from 100% cotton.",
+    "test_price_id": "price_1UDpTEBN7SXhPCp6icJQGSYp"
   },
   {
     "id": "sparkly-slouchy-wide-neck-top",
     "name": "The Slouch Top in Grey Sparkle",
     "color": "Grey",
     "colorSwatch": "#8a8a8a",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 1 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
     "price": 29,
-    "price_id":"price_1UDZQVBN7SXhPCp6MmT2guft",
+    "price_id": "price_1UDZQVBN7SXhPCp6MmT2guft",
     "image": "images/sparkletopfront.jpg?v=5",
     "imageHover": "images/sparkle-top/front.jpg?v=1",
     "images": [
@@ -112,15 +159,23 @@
       "images/sparkletopfront2.jpg?v=4",
       "images/sparkletopback.jpg?v=4"
     ],
-    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom."
+    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom.",
+    "test_price_id": "price_1UDpTEBN7SXhPCp6KxjZi4nL"
   },
   {
     "id": "teal-skirt-low-rise-foldover",
     "name": "Cleo Foldover Skirt in Aqua",
     "color": "Teal",
     "colorSwatch": "#008080",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 1 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
     "price": 50,
     "price_id": "price_1UDZSUBN7SXhPCp65nDCGghn",
     "image": "images/teal-skirt/front.jpg?v=4",
@@ -131,15 +186,23 @@
       "images/teal-skirt/detail.jpg",
       "images/teal-skirt/video.mov?v=2"
     ],
-    "description": "A low rise foldover skirt in teal. Foldover waistband with a white button. Lightweight and stretchy material."
+    "description": "A low rise foldover skirt in teal. Foldover waistband with a white button. Lightweight and stretchy material.",
+    "test_price_id": "price_1UDpTFBN7SXhPCp6uDF8UlNJ"
   },
   {
     "id": "asymmetric-top-sage",
     "name": "The Asymmetric Top in Aqua",
     "color": "Blue",
     "colorSwatch": "#9CAF88",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 1 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
     "price": 39,
     "price_id": "price_1UDZSvBN7SXhPCp6BxKG3VGJ",
     "image": "images/asymmetric-top/front.jpg?v=4",
@@ -148,17 +211,25 @@
       "images/asymmetric-top/front.jpg?v=4",
       "images/asymmetric-top/detail.jpg"
     ],
-    "description": "A one-shoulder top in sage green with a long tie strap. Soft ribbed knit with an asymmetric neckline."
+    "description": "A one-shoulder top in sage green with a long tie strap. Soft ribbed knit with an asymmetric neckline.",
+    "test_price_id": "price_1UDpTFBN7SXhPCp6BxY6bxl4"
   },
   {
     "id": "peplum-top-aqua",
     "name": "The Peplum V Neck Crossover Top in Aqua",
     "color": "Blue",
     "colorSwatch": "#7eb8c9",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 1 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
     "price": 39,
-    "price_id":"price_1UDZVGBN7SXhPCp6NHx2jezr",
+    "price_id": "price_1UDZVGBN7SXhPCp6NHx2jezr",
     "image": "images/peplum-top/front.jpg?v=4",
     "imageHover": "images/peplum-top/front-alt.jpg?v=4",
     "images": [
@@ -166,15 +237,23 @@
       "images/peplum-top/front-alt.jpg?v=4",
       "images/peplum-top/back.jpg?v=4"
     ],
-    "description": "A light blue wrap-front top with a gathered peplum hem. V neck crossover top."
+    "description": "A light blue wrap-front top with a gathered peplum hem. V neck crossover top.",
+    "test_price_id": "price_1UDpTFBN7SXhPCp6osygqjHI"
   },
   {
     "id": "stripe-set-blush",
     "name": "The Striped Boloro and Lace Tube Set in Blush and White",
     "color": "Blush",
     "colorSwatch": "#f4c2c2",
-    "sizes": ["XS/S"],
-    "inventory": [{ "size": "XS/S", "quantity": 1 }],
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
     "price": 60,
     "price_id": "price_1UDZWEBN7SXhPCp6ITi6oDpM",
     "image": "images/stripe-set/vneck.jpg?v=4",
@@ -185,15 +264,23 @@
       "images/stripe-set/vneck-alt.jpg?v=4",
       "images/stripe-set/scoop.jpg?v=4"
     ],
-    "description": "A pink and white striped set with a lace-trim blush pink and whte stripe tube top and matching boloro with buttons."
+    "description": "A pink and white striped set with a lace-trim blush pink and whte stripe tube top and matching boloro with buttons.",
+    "test_price_id": "price_1UDpTGBN7SXhPCp6Z5XaYlKH"
   },
   {
     "id": "pink-lace-bikini-lime",
     "name": "The Picot Lace Bikini in Lime",
     "color": "Lime",
     "colorSwatch": "#c5e86c",
-    "sizes": ["XS"],
-    "inventory": [{ "size": "XS", "quantity": 1 }],
+    "sizes": [
+      "XS"
+    ],
+    "inventory": [
+      {
+        "size": "XS",
+        "quantity": 1
+      }
+    ],
     "price": 65,
     "price_id": "price_1UDZWzBN7SXhPCp6oq5E8bFS",
     "image": "images/lime-bikini/set-alt.jpg?v=4",
@@ -205,6 +292,7 @@
       "images/lime-bikini/top.jpg?v=4",
       "images/lime-bikini/top-alt.jpg?v=4"
     ],
-    "description": "A lime green triangle bikini with pink lace trim. Tie-side bottoms and tie top. Lined with elastic for support. Swimsuit material suitable for swimming."
+    "description": "A lime green triangle bikini with pink lace trim. Tie-side bottoms and tie top. Lined with elastic for support. Swimsuit material suitable for swimming.",
+    "test_price_id": "price_1UDpTGBN7SXhPCp6xcdMcPWj"
   }
 ]
