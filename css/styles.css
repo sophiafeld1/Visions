@@ -1459,6 +1459,14 @@ body.cart-drawer-open {
   color: #ffffff;
 }
 
+.landing-cta-bar {
+  border-top: 1px solid var(--color-border);
+  background: #fafafa;
+  padding: clamp(1.25rem, 3vw, 1.75rem) var(--page-padding);
+  display: flex;
+  justify-content: center;
+}
+
 .preview-access-bar {
   border-top: 1px solid var(--color-border);
   background: #fafafa;

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { createCheckoutSession } = require("../lib/checkout");
 
 module.exports = async (req, res) => {
