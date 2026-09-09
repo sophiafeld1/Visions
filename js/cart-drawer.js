@@ -83,6 +83,7 @@ function renderFilledCart(container, items) {
         </div>
         <p class="cart-summary__note">Shipping calculated at checkout</p>
 
+        <p id="checkout-error" class="cart-summary__error" hidden role="alert"></p>
         <button id="checkout-btn" class="btn btn--full" type="button">Checkout</button>
         <button id="continue-shopping-btn" class="btn btn--outline btn--full" type="button">
           Continue Shopping
@@ -91,8 +92,23 @@ function renderFilledCart(container, items) {
     </div>
   `;
 
-  container.querySelector("#checkout-btn").addEventListener("click", () => {
-    alert("Checkout coming soon — we'll connect a payment method later.");
+  const checkoutBtn = container.querySelector("#checkout-btn");
+  const checkoutError = container.querySelector("#checkout-error");
+
+  checkoutBtn.addEventListener("click", async () => {
+    checkoutError.hidden = true;
+    checkoutError.textContent = "";
+    checkoutBtn.disabled = true;
+    checkoutBtn.textContent = "Redirecting…";
+
+    try {
+      await startCheckout(getCart());
+    } catch (error) {
+      checkoutError.textContent = error.message;
+      checkoutError.hidden = false;
+      checkoutBtn.disabled = false;
+      checkoutBtn.textContent = "Checkout";
+    }
   });
 
   container.querySelector("#continue-shopping-btn").addEventListener("click", closeCartDrawer);

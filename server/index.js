@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const { query } = require("./db");
 const { loadProductsFromFile } = require("../lib/products-store");
+const { createCheckoutSession } = require("../lib/checkout");
 
 const app = express();
 const port = Number(process.env.PORT || 5500);
@@ -76,6 +77,16 @@ app.get("/api/products/:id", async (req, res) => {
     res.json(product);
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+app.post("/api/create-checkout-session", async (req, res) => {
+  try {
+    const origin = `${req.protocol}://${req.get("host")}`;
+    const result = await createCheckoutSession({ items: req.body?.items, origin });
+    res.json(result);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
 });
 
