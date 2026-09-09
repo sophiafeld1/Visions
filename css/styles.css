@@ -1413,6 +1413,13 @@ body.cart-drawer-open {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.landing-hero__banner:hover {
+  background-color: #fafafa;
 }
 
 .landing-hero__caption {
