@@ -7,11 +7,11 @@
     "sizes": ["XS/S"],
     "inventory": [{ "size": "XS/S", "quantity": 4 }],
     "price": 35,
-    "image": "images/blacktopaltweartiefront.jpg",
+    "image": "images/v-neck-tie-top/worn-front.jpg",
     "imageHover": "images/blacktopTIKTOK.mp4",
     "images": [
+      "images/v-neck-tie-top/worn-front.jpg",
       "images/blacktopaltweartiefront.jpg",
-      "images/blacktopfront2.jpg",
       "images/blacktopTIKTOK.mp4",
       "images/blacktoptiealtcrossed.jpg",
       "images/blacktopback4.jpg",
