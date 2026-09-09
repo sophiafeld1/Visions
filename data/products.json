@@ -46,10 +46,10 @@
     "sizes": ["XS"],
     "inventory": [{ "size": "XS", "quantity": 1 }],
     "price": 29,
-    "image": "images/2pcbluetopfront.jpg?v=5",
-    "imageHover": "images/blue-polka/front.jpg?v=1",
+    "image": "",
+    "imageHover": "images/blue-polka/bluedotsflaylay.jpg?v=1",
     "images": [
-      "images/blue-polka/front.jpg?v=1",
+      "images/blue-polka/bluedotsflaylay.jpg?v=1",
       "images/2pcbluetopfront.jpg?v=5",
       "images/blue-polka/back.jpg?v=1"
     ],
