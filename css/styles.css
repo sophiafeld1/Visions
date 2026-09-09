@@ -1372,22 +1372,35 @@ body.cart-drawer-open {
   background: #ffffff;
 }
 
-.landing-hero__link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: opacity 0.2s ease;
-}
-
-.landing-hero__link:hover {
-  opacity: 0.96;
-}
-
 .landing-hero__media {
+  position: relative;
   width: 100%;
   overflow: hidden;
   line-height: 0;
   background: #ffffff;
+}
+
+.landing-hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.landing-hero__cta {
+  pointer-events: auto;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 24px rgba(28, 40, 64, 0.12);
+}
+
+.landing-hero__cta:hover {
+  background: var(--color-text);
+  color: #ffffff;
+  box-shadow: 0 4px 24px rgba(28, 40, 64, 0.2);
 }
 
 .landing-hero__video {
