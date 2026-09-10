@@ -19,7 +19,7 @@
       <nav class="site-nav" aria-label="Primary">
         <a class="site-nav-link" href="index.html">Home</a>
         <a class="site-nav-link" href="shop.html">Shop</a>
-        <a class="site-nav-link" href="about.html">About Me</a>
+        <a class="site-nav-link" href="about.html">About</a>
       </nav>
       <a href="index.html">
         <img
@@ -33,16 +33,16 @@
     <main class="checkout-page">
       <div class="checkout-page__panel">
         <h1 class="checkout-page__title">Thank you for your order</h1>
-        <p class="checkout-page__text">
-          Your payment was successful. You'll receive a confirmation email from Stripe with your
-          receipt and shipping details.
-        </p>
+        <div id="checkout-receipt-content" class="checkout-receipt-content" aria-live="polite">
+          <p class="checkout-page__text">Loading your receipt…</p>
+        </div>
         <a class="btn btn--full" href="shop.html">Continue Shopping</a>
       </div>
     </main>
 
     <script src="js/cart.js"></script>
     <script src="js/checkout.js"></script>
+    <script src="js/checkout-success.js"></script>
     <script>
       clearCartAfterCheckout();
     </script>
