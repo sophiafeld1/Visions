@@ -58,6 +58,9 @@ function addToCart(productId, size = "XS", quantity = 1) {
   }
 
   saveCart(cart);
+  if (typeof trackGa4AddToCart === "function") {
+    trackGa4AddToCart(product, quantity);
+  }
   return true;
 }
 

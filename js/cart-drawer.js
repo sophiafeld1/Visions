@@ -102,6 +102,9 @@ function renderFilledCart(container, items) {
     checkoutBtn.textContent = "Redirecting…";
 
     try {
+      if (typeof trackGa4BeginCheckout === "function") {
+        trackGa4BeginCheckout(getCart());
+      }
       await startCheckout(getCart());
     } catch (error) {
       checkoutError.textContent = error.message;

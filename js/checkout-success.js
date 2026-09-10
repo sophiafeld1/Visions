@@ -66,6 +66,14 @@ async function loadCheckoutReceipt() {
     }
 
     container.innerHTML = renderReceipt(data);
+    if (typeof trackGa4Purchase === "function") {
+      trackGa4Purchase({
+        sessionId,
+        currency: data.currency,
+        amountTotal: data.amountTotal,
+        lineItems: data.lineItems,
+      });
+    }
   } catch (error) {
     container.innerHTML = `<p class="checkout-page__text">${error.message}</p>`;
   }
