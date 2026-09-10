@@ -1,26 +1,7 @@
 (function () {
-  const measurementId = window.VISIONS_GA4_ID;
-
-  if (!measurementId || !measurementId.startsWith("G-")) {
+  if (typeof window.gtag !== "function") {
     return;
   }
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag =
-    window.gtag ||
-    function gtag() {
-      window.dataLayer.push(arguments);
-    };
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-  document.head.appendChild(script);
-
-  window.gtag("js", new Date());
-  window.gtag("config", measurementId, {
-    send_page_view: true,
-  });
 
   window.trackGa4Event = function trackGa4Event(eventName, params) {
     window.gtag("event", eventName, params || {});

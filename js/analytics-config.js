@@ -1,3 +1,4 @@
 // Paste your GA4 Measurement ID from Google Analytics (Admin → Data streams → Web).
 // Example: G-ABC123XYZ
-window.VISIONS_GA4_ID = "";
+window.VISIONS_GA4_ID = "G-SPH1T9B87G";
+
