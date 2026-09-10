@@ -3,6 +3,10 @@
     return;
   }
 
+  if (new URLSearchParams(window.location.search).has("ga_debug")) {
+    window.gtag("config", "G-5VRDK2R76M", { debug_mode: true });
+  }
+
   window.trackGa4Event = function trackGa4Event(eventName, params) {
     window.gtag("event", eventName, params || {});
   };
