@@ -102,7 +102,7 @@ async function loadProductPage() {
     return;
   }
 
-  document.title = `${product.name} — Visions`;
+  applyProductSeo(product);
 
   const productName = document.getElementById("product-name");
   if (productName) {

@@ -13,7 +13,7 @@
   --color-surface-solid: #ffffff;
   --color-border: rgba(28, 40, 64, 0.12);
   --font-display: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
-  --font-body: "Lora", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
   --font-accent: "Special Elite", "American Typewriter", monospace;
   --header-height: 120px;
   --page-padding: clamp(1.25rem, 4vw, 3rem);
@@ -25,17 +25,30 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: var(--font-body);
+  font-family: var(--font-display);
+  font-style: normal;
   font-weight: 400;
   color: var(--color-text);
   background-color: #ffffff;
   line-height: 1.7;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   display: flex;
   flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .page-background {
@@ -76,16 +89,15 @@ body {
   text-decoration: none;
   color: var(--color-text);
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: none;
   cursor: pointer;
   font: inherit;
   appearance: none;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .cart-button:hover {
-  border-color: var(--color-text);
-  background: #fafafa;
+  opacity: 0.55;
 }
 
 .cart-button__icon {
@@ -119,20 +131,24 @@ body {
   gap: clamp(0.85rem, 2.5vw, 1.75rem);
 }
 
-.site-nav-link {
-  font-family: var(--font-accent);
-  font-size: 0.84rem;
-  font-weight: 400;
-  letter-spacing: 0.14em;
+.site-nav a,
+.site-nav-link,
+.site-footer__legal a {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-text-muted);
-  transition: color 0.2s ease;
+  color: var(--color-text);
+  transition: opacity 0.2s ease;
 }
 
 .site-nav-link:hover,
-.site-nav-link--active {
-  color: var(--color-text);
+.site-nav-link--active,
+.site-footer__legal a:hover {
+  opacity: 0.65;
 }
 
 .site-header__socials {
@@ -144,14 +160,15 @@ body {
 }
 
 .site-header__social {
-  font-family: var(--font-accent);
-  font-size: 0.84rem;
-  font-weight: 400;
-  letter-spacing: 0.14em;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--color-text-muted);
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
   white-space: nowrap;
 }
 
@@ -196,6 +213,23 @@ main:has(.about-page) {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.shop-page {
+  padding-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.shop-page__title {
+  max-width: 1400px;
+  margin: 0 auto 1.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  text-align: left;
+  color: var(--color-text);
 }
 
 .shop-grid {
@@ -363,9 +397,11 @@ main:has(.about-page) {
 
 .product-card__name {
   font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
   line-height: 1.35;
   margin-bottom: 0.45rem;
 }
@@ -373,6 +409,7 @@ main:has(.about-page) {
 .product-card__price {
   font-family: var(--font-display);
   font-size: 1.05rem;
+  font-style: normal;
   font-weight: 500;
   color: var(--color-text);
   margin-bottom: 0.6rem;
@@ -478,9 +515,10 @@ main.product-page {
 .product-detail__title {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
   line-height: 1.35;
   margin-bottom: 0.65rem;
 }
@@ -488,6 +526,7 @@ main.product-page {
 .product-detail__price {
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  font-style: italic;
   font-weight: 500;
   text-align: left;
   margin-bottom: 1.75rem;
@@ -654,34 +693,35 @@ main.product-page {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 180px;
-  padding: 0.9rem 1.75rem;
-  font-family: var(--font-accent);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid var(--color-text);
-  background: var(--color-text);
-  color: #fff;
+  min-width: 0;
+  padding: 0.35rem 0;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
-  background: transparent;
+  opacity: 0.55;
   color: var(--color-text);
 }
 
 .btn:disabled {
-  opacity: 0.5;
+  opacity: 0.35;
   cursor: not-allowed;
 }
 
 .btn--full {
   width: 100%;
-  min-width: 0;
 }
 
 .btn--outline {
@@ -690,23 +730,28 @@ main.product-page {
 }
 
 .btn--outline:hover {
-  background: var(--color-text);
-  color: #fff;
+  opacity: 0.55;
+  background: transparent;
+  color: var(--color-text);
 }
 
 .back-link {
   display: inline-block;
   margin-bottom: 2rem;
-  font-family: var(--font-accent);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-text-muted);
-  transition: color 0.2s ease;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  color: var(--color-text);
+  transition: opacity 0.2s ease;
 }
 
 .back-link:hover {
+  opacity: 0.55;
   color: var(--color-text);
 }
 
@@ -770,7 +815,8 @@ body.cart-drawer-open {
 .cart-drawer__title {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .cart-drawer__count {
@@ -911,18 +957,21 @@ body.cart-drawer-open {
 .cart-item__name {
   font-family: var(--font-display);
   font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
   margin-bottom: 0.35rem;
 }
 
 .cart-item__meta {
-  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-style: italic;
   color: var(--color-text-muted);
   margin-bottom: 0.35rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
 }
 
 .cart-item__price {
@@ -1099,20 +1148,8 @@ body.cart-drawer-open {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem 1.5rem;
+  gap: 1rem 1.75rem;
   margin-bottom: 1.5rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.site-footer__legal a {
-  color: var(--color-text-muted);
-  text-decoration: none;
-}
-
-.site-footer__legal a:hover {
-  color: var(--color-text);
 }
 
 .landing-intro {
@@ -1149,6 +1186,12 @@ body.cart-drawer-open {
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--color-text-muted);
+}
+
+.shop-intro--bottom {
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--page-padding);
+  border-top: 1px solid var(--color-border);
 }
 
 .policy-page {
@@ -1205,7 +1248,8 @@ body.cart-drawer-open {
 .about-page__greeting {
   font-family: var(--font-display);
   font-size: clamp(2.1rem, 5vw, 2.85rem);
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 500;
   letter-spacing: 0.02em;
   margin-bottom: 1.25rem;
 }
@@ -1223,7 +1267,8 @@ body.cart-drawer-open {
 .about-page__thanks {
   font-family: var(--font-display);
   font-size: clamp(1.55rem, 3.5vw, 2.05rem);
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.4;
   margin-top: 2rem !important;
@@ -1264,9 +1309,10 @@ body.cart-drawer-open {
 .about-gallery__title {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 2.2vw, 1.55rem);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
   margin-bottom: clamp(0.85rem, 1.5vw, 1.15rem);
 }
 
@@ -1320,10 +1366,11 @@ body.cart-drawer-open {
 }
 
 .instagram-section__title {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
-  font-weight: 400;
-  letter-spacing: 0.01em;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .instagram-section__title em {
@@ -1511,12 +1558,18 @@ body.cart-drawer-open {
 }
 
 .landing-hero {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background: #ffffff;
+  min-height: calc(100svh - var(--header-height));
+  max-height: calc(100svh - var(--header-height));
 }
 
 .landing-hero__media {
   position: relative;
+  flex: 1;
+  min-height: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
@@ -1524,21 +1577,24 @@ body.cart-drawer-open {
 }
 
 .landing-hero__shop-btn {
+  flex-shrink: 0;
   display: block;
   width: 100%;
   padding: clamp(1.25rem, 3vw, 1.75rem) var(--page-padding);
-  font-family: var(--font-display);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: normal;
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-transform: none;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
   background: var(--color-text);
   border: none;
   border-radius: 0;
-  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .landing-hero__shop-btn:hover {
@@ -1590,11 +1646,11 @@ body.cart-drawer-open {
 
 .landing-hero__video {
   display: block;
-  width: 103%;
+  width: 100%;
+  height: 100%;
   max-width: none;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  max-height: min(85vh, 900px);
+  max-height: none;
+  aspect-ratio: unset;
   object-fit: cover;
   object-position: left center;
   background: #ffffff;
@@ -1803,6 +1859,11 @@ body.cart-drawer-open {
     justify-self: center;
   }
 
+  .landing-hero {
+    min-height: calc(100svh - 150px);
+    max-height: calc(100svh - 150px);
+  }
+
   .landing-hero__video {
     width: 100%;
   }
@@ -1862,6 +1923,11 @@ body.cart-drawer-open {
 
 @media (max-width: 480px) {
   .site-nav-link,
+  .site-footer__legal a {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+  }
+
   .site-header__social {
     font-size: 0.76rem;
     letter-spacing: 0.1em;

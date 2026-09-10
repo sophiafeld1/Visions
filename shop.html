@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop — Visions</title>
+    <title>Shop Handmade Clothing | Visions Studio Handmade Clothing</title>
     <meta
       name="description"
-      content="Shop Visions handmade clothing. Browse tops, sets, skirts, and swimwear with prices and secure checkout."
+      content="Shop handmade and upcycled clothing at Visions Studio Handmade Clothing. Browse one-of-a-kind tops, sets, skirts, and swimwear with secure checkout."
     />
+    <link rel="canonical" href="https://visionsstudio.us/shop.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
   </head>
   <body>
     <div class="page-background" aria-hidden="true"></div>
@@ -29,7 +30,7 @@
         <img
           class="site-logo"
           src="images/logo/visionsstudiostaroveris.png?v=2"
-          alt="Visions"
+          alt="Visions Studio Handmade Clothing"
         />
       </a>
       <button type="button" class="cart-button" id="cart-open-btn" aria-label="View cart">
@@ -42,12 +43,8 @@
       </button>
     </header>
 
-    <main>
-      <h1 class="section-label">Visions Shop</h1>
-      <p class="shop-intro">
-        Handmade clothing and upcycled clothing designed and sewed by Visions. All prices in USD.
-        Secure checkout with Stripe.
-      </p>
+    <main class="shop-page">
+      <h1 class="shop-page__title">Shop</h1>
       <div id="shop-grid" class="shop-grid" aria-live="polite">
         <article class="product-card product-card--static">
           <a href="product.html?id=v-neck-tie-top">
@@ -174,6 +171,11 @@
       </div>
     </section>
 
+    <p class="shop-intro shop-intro--bottom">
+      Handmade clothing and upcycled clothing designed and sewed by Visions. All prices in USD.
+      Secure checkout with Stripe.
+    </p>
+
     <footer class="site-footer">
       <nav class="site-footer__legal" aria-label="Legal">
         <a href="contact.html">Contact</a>
@@ -193,7 +195,7 @@
           <img
             class="site-footer__logo"
             src="images/logo/visionsstudiostaroveris.png?v=2"
-            alt="Visions"
+            alt="Visions Studio Handmade Clothing"
           />
         </a>
         <a
@@ -214,5 +216,6 @@
     <script src="js/instagram.js"></script>
     <script src="js/instagram-carousel.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/vercel-analytics.js"></script>
   </body>
 </html>

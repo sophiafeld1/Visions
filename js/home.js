@@ -11,7 +11,7 @@ async function loadProducts() {
 
   grid.innerHTML = PRODUCTS.map((product) => {
     const sizes = product.sizes?.length ? product.sizes : ["XS"];
-    const colorLabel = product.color ? ` | ${product.color.toUpperCase()}` : "";
+    const colorLabel = product.color ? ` · ${product.color.toLowerCase()}` : "";
     const swatchColor = product.colorSwatch || "#d9d9d9";
     const hoverMedia = product.imageHover;
     const hasHover = Boolean(hoverMedia && hoverMedia !== product.image);
@@ -68,7 +68,7 @@ async function loadProducts() {
         </div>
         <div class="product-card__info">
           <a class="product-card__title-link" href="product.html?id=${encodeURIComponent(product.id)}">
-            <h2 class="product-card__name">${product.name.toUpperCase()}${colorLabel}</h2>
+            <h2 class="product-card__name">${product.name}${colorLabel}</h2>
           </a>
           <p class="product-card__price">$${product.price.toFixed(2)}</p>
           <span class="product-card__swatch" style="background-color: ${swatchColor}" aria-hidden="true"></span>

@@ -8,9 +8,11 @@
     "db:setup": "node server/setup-db.js",
     "db:update": "node server/update-inventory.js",
     "vercel": "vercel",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "pg": "^8.13.3",
