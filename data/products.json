@@ -29,60 +29,6 @@
     "test_price_id": "price_1UDpTCBN7SXhPCp6VV7TwRyD"
   },
   {
-    "id": "blue-polka-dot-halter-top",
-    "name": "The Polka Cowl Top in Sky Blue",
-    "color": "Blue",
-    "colorSwatch": "#7eb8c9",
-    "sizes": [
-      "XS"
-    ],
-    "inventory": [
-      {
-        "size": "XS",
-        "quantity": 1
-      }
-    ],
-    "price": 29,
-    "price_id": "price_1UDZLWBN7SXhPCp6yKbmzVud",
-    "image": "images/bluepolkafront2.jpg?v=4",
-    "imageHover": "images/polkablueback.jpg?v=4",
-    "images": [
-      "images/bluepolkafront2.jpg?v=4",
-      "images/IMG_9602.jpg?v=4",
-      "images/bluepolkaside.jpg?v=4",
-      "images/bluepolkaside2.jpg?v=4",
-      "images/polkablueback.jpg?v=4"
-    ],
-    "description": "Light blue polka dot halter top with a draped cowl neckline and open back.",
-    "test_price_id": "price_1UDpTDBN7SXhPCp6iGFHRloE"
-  },
-  {
-    "id": "blue-polka-dot-two-piece-halter-top",
-    "name": "The Buckle Halter Set in Sky Blue",
-    "color": "Blue",
-    "colorSwatch": "#7eb8c9",
-    "sizes": [
-      "XS"
-    ],
-    "inventory": [
-      {
-        "size": "XS",
-        "quantity": 1
-      }
-    ],
-    "price": 29,
-    "price_id": "price_1UDZMUBN7SXhPCp6mQSRJfvH",
-    "image": "images/2pcbluetopfront.jpg?v=5",
-    "imageHover": "images/blue-polka/front.jpg?v=1",
-    "images": [
-      "images/2pcbluetopfront.jpg?v=5",
-      "images/blue-polka/front.jpg?v=1",
-      "images/blue-polka/back.jpg?v=1"
-    ],
-    "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck.",
-    "test_price_id": "price_1UDpTDBN7SXhPCp6qlvtPMLp"
-  },
-  {
     "id": "off-shoulder-red-polka-dot-top",
     "name": "Ruby Off-Shoulder Top in Red Polka",
     "color": "Red",
@@ -135,10 +81,10 @@
     "test_price_id": "price_1UDpTEBN7SXhPCp6icJQGSYp"
   },
   {
-    "id": "sparkly-slouchy-wide-neck-top",
-    "name": "The Slouch Top in Grey Sparkle",
-    "color": "Grey",
-    "colorSwatch": "#8a8a8a",
+    "id": "asymmetric-top-sage",
+    "name": "The Asymmetric Top in Aqua",
+    "color": "Blue",
+    "colorSwatch": "#9CAF88",
     "sizes": [
       "XS/S"
     ],
@@ -148,19 +94,16 @@
         "quantity": 1
       }
     ],
-    "price": 29,
-    "price_id": "price_1UDZQVBN7SXhPCp6MmT2guft",
-    "image": "images/sparkletopfront.jpg?v=5",
-    "imageHover": "images/sparkle-top/front.jpg?v=1",
+    "price": 39,
+    "price_id": "price_1UDZSvBN7SXhPCp6BxKG3VGJ",
+    "image": "images/asymmetric-top/front.jpg?v=4",
+    "imageHover": "images/asymmetric-top/detail.jpg",
     "images": [
-      "images/sparkletopfront.jpg?v=5",
-      "images/sparkle-top/front.jpg?v=1",
-      "images/sparkle-top/back.jpg?v=1",
-      "images/sparkletopfront2.jpg?v=4",
-      "images/sparkletopback.jpg?v=4"
+      "images/asymmetric-top/front.jpg?v=4",
+      "images/asymmetric-top/detail.jpg"
     ],
-    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom.",
-    "test_price_id": "price_1UDpTEBN7SXhPCp6KxjZi4nL"
+    "description": "A one-shoulder top in sage green with a long tie strap. Soft ribbed knit with an asymmetric neckline.",
+    "test_price_id": "price_1UDpTFBN7SXhPCp6BxY6bxl4"
   },
   {
     "id": "teal-skirt-low-rise-foldover",
@@ -188,31 +131,6 @@
     ],
     "description": "A low rise foldover skirt in teal. Foldover waistband with a white button. Lightweight and stretchy material.",
     "test_price_id": "price_1UDpTFBN7SXhPCp6uDF8UlNJ"
-  },
-  {
-    "id": "asymmetric-top-sage",
-    "name": "The Asymmetric Top in Aqua",
-    "color": "Blue",
-    "colorSwatch": "#9CAF88",
-    "sizes": [
-      "XS/S"
-    ],
-    "inventory": [
-      {
-        "size": "XS/S",
-        "quantity": 1
-      }
-    ],
-    "price": 39,
-    "price_id": "price_1UDZSvBN7SXhPCp6BxKG3VGJ",
-    "image": "images/asymmetric-top/front.jpg?v=4",
-    "imageHover": "images/asymmetric-top/detail.jpg",
-    "images": [
-      "images/asymmetric-top/front.jpg?v=4",
-      "images/asymmetric-top/detail.jpg"
-    ],
-    "description": "A one-shoulder top in sage green with a long tie strap. Soft ribbed knit with an asymmetric neckline.",
-    "test_price_id": "price_1UDpTFBN7SXhPCp6BxY6bxl4"
   },
   {
     "id": "peplum-top-aqua",
@@ -294,5 +212,87 @@
     ],
     "description": "A lime green triangle bikini with pink lace trim. Tie-side bottoms and tie top. Lined with elastic for support. Swimsuit material suitable for swimming.",
     "test_price_id": "price_1UDpTGBN7SXhPCp6xcdMcPWj"
+  },
+  {
+    "id": "sparkly-slouchy-wide-neck-top",
+    "name": "The Slouch Top in Grey Sparkle",
+    "color": "Grey",
+    "colorSwatch": "#8a8a8a",
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
+    "price": 29,
+    "price_id": "price_1UDZQVBN7SXhPCp6MmT2guft",
+    "image": "images/sparkletopfront.jpg?v=5",
+    "imageHover": "images/sparkle-top/front.jpg?v=1",
+    "images": [
+      "images/sparkletopfront.jpg?v=5",
+      "images/sparkle-top/front.jpg?v=1",
+      "images/sparkle-top/back.jpg?v=1",
+      "images/sparkletopfront2.jpg?v=4",
+      "images/sparkletopback.jpg?v=4"
+    ],
+    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom.",
+    "test_price_id": "price_1UDpTEBN7SXhPCp6KxjZi4nL"
+  },
+  {
+    "id": "blue-polka-dot-halter-top",
+    "name": "The Polka Cowl Top in Sky Blue",
+    "color": "Blue",
+    "colorSwatch": "#7eb8c9",
+    "sizes": [
+      "XS"
+    ],
+    "inventory": [
+      {
+        "size": "XS",
+        "quantity": 1
+      }
+    ],
+    "price": 29,
+    "price_id": "price_1UDZLWBN7SXhPCp6yKbmzVud",
+    "image": "images/bluepolkafront2.jpg?v=4",
+    "imageHover": "images/polkablueback.jpg?v=4",
+    "images": [
+      "images/bluepolkafront2.jpg?v=4",
+      "images/IMG_9602.jpg?v=4",
+      "images/bluepolkaside.jpg?v=4",
+      "images/bluepolkaside2.jpg?v=4",
+      "images/polkablueback.jpg?v=4"
+    ],
+    "description": "Light blue polka dot halter top with a draped cowl neckline and open back.",
+    "test_price_id": "price_1UDpTDBN7SXhPCp6iGFHRloE"
+  },
+  {
+    "id": "blue-polka-dot-two-piece-halter-top",
+    "name": "The Buckle Halter Set in Sky Blue",
+    "color": "Blue",
+    "colorSwatch": "#7eb8c9",
+    "sizes": [
+      "XS"
+    ],
+    "inventory": [
+      {
+        "size": "XS",
+        "quantity": 1
+      }
+    ],
+    "price": 29,
+    "price_id": "price_1UDZMUBN7SXhPCp6mQSRJfvH",
+    "image": "images/2pcbluetopfront.jpg?v=5",
+    "imageHover": "images/blue-polka/front.jpg?v=1",
+    "images": [
+      "images/2pcbluetopfront.jpg?v=5",
+      "images/blue-polka/front.jpg?v=1",
+      "images/blue-polka/back.jpg?v=1"
+    ],
+    "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck.",
+    "test_price_id": "price_1UDpTDBN7SXhPCp6qlvtPMLp"
   }
 ]
