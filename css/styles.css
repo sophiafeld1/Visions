@@ -436,9 +436,42 @@ main:has(.about-page) {
 }
 
 @media (max-width: 520px) {
+  .shop-page {
+    padding-top: 0.85rem;
+  }
+
   .shop-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem 0.4rem;
+  }
+
+  .shop-page__title {
+    margin-bottom: 0.85rem;
+    font-size: 1.25rem;
+  }
+
+  .product-card__info {
+    padding: 0.45rem 0 0;
+  }
+
+  .product-card__name {
+    font-size: 0.62rem;
+    line-height: 1.25;
+    margin-bottom: 0.2rem;
+  }
+
+  .product-card__price {
+    font-size: 0.72rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .product-card__swatch {
+    width: 10px;
+    height: 10px;
+  }
+
+  .product-card__quick-add {
+    display: none;
   }
 }
 
@@ -1861,12 +1894,24 @@ body.cart-drawer-open {
   }
 
   .landing-hero {
-    min-height: calc(100svh - 150px);
-    max-height: calc(100svh - 150px);
+    min-height: auto;
+    max-height: none;
+  }
+
+  .landing-hero__media {
+    flex: 0 0 auto;
+    aspect-ratio: 4 / 5;
+    max-height: min(48svh, 380px);
   }
 
   .landing-hero__video {
     width: 100%;
+    height: 100%;
+  }
+
+  .landing-hero__shop-btn {
+    padding: 1rem var(--page-padding);
+    font-size: 1.35rem;
   }
 
   .landing-hero__banner {
