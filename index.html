@@ -44,7 +44,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=9" />
+    <link rel="stylesheet" href="css/styles.css?v=10" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VRDK2R76M"></script>
     <script>
@@ -152,6 +152,40 @@
         </div>
       </section>
 
+      <section class="instagram-section" aria-labelledby="instagram-heading">
+        <div class="instagram-section__header">
+          <h2 id="instagram-heading" class="instagram-section__title">
+            <em>Instagram</em>
+          </h2>
+          <a
+            class="instagram-section__link"
+            href="https://www.instagram.com/visionssclothing/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @visionssclothing
+          </a>
+        </div>
+
+        <div class="instagram-carousel">
+          <button
+            class="instagram-carousel__nav instagram-carousel__nav--prev"
+            type="button"
+            aria-label="Scroll Instagram photos left"
+          >
+            ‹
+          </button>
+          <div id="instagram-track" class="instagram-carousel__track"></div>
+          <button
+            class="instagram-carousel__nav instagram-carousel__nav--next"
+            type="button"
+            aria-label="Scroll Instagram photos right"
+          >
+            ›
+          </button>
+        </div>
+      </section>
+
       <section class="landing-intro">
         <p class="landing-intro__text">
           Visions Studio Handmade Clothing — one-of-a-kind handmade and upcycled pieces designed
@@ -194,6 +228,8 @@
     </footer>
 
     <script src="js/home-landing.js?v=2"></script>
+    <script src="js/instagram.js"></script>
+    <script src="js/instagram-carousel.js"></script>
     <script src="js/vercel-analytics.js"></script>
   </body>
 </html>

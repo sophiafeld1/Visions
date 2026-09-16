@@ -533,6 +533,10 @@ main.product-page {
   background: #ffffff;
 }
 
+.product-gallery__video {
+  pointer-events: none;
+}
+
 .product-detail__sidebar {
   position: sticky;
   top: var(--header-height);
@@ -1189,9 +1193,13 @@ body.cart-drawer-open {
 .landing-intro {
   max-width: 720px;
   margin: 0 auto;
-  padding: clamp(2.5rem, 6vw, 4rem) var(--page-padding) clamp(3rem, 8vw, 5rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--page-padding) clamp(2.5rem, 6vw, 4rem);
   text-align: center;
   border-top: 1px solid var(--color-border);
+}
+
+.landing-main .instagram-section {
+  background: #ffffff;
 }
 
 .landing-intro__title {

@@ -16,10 +16,10 @@
     "price": 35,
     "price_id": "price_1U4QQtBN7SXhPCp6Do9EgqYB",
     "image": "images/black-tie-top/worn-front.jpg?v=1",
-    "imageHover": "images/blacktopTIKTOK.gif?v=1",
+    "imageHover": "images/blacktopTIKTOK.mp4",
     "images": [
       "images/black-tie-top/worn-front.jpg?v=1",
-      "images/blacktopTIKTOK.gif?v=1",
+      "images/blacktopTIKTOK.mp4",
       "images/black-tie-top/blacktopaltweartiefront.jpg?v=1",
       "images/black-tie-top/blacktoptiealtcrossed.jpg?v=1",
       "images/black-tie-top/blacktiebackUSE.jpg?v=1",
@@ -75,7 +75,7 @@
     "imageHover": "images/pinkstripebolero/bolero-front-close.jpg?v=5",
     "images": [
       "images/pinkstripebolero/bolero-front.jpg?v=5",
-      "images/pinkstripebolero/detailvidpinkstripebolero.gif?v=1",
+      "images/pinkstripebolero/detailvidpinkstripebolero.MOV",
       "images/pinkstripebolero/bolero-front-close.jpg?v=5",
       "images/pinkstripebolero/tank-front.jpg?v=5",
       "images/pinkstripebolero/tank-back.jpg?v=5"
@@ -157,7 +157,7 @@
     "images": [
       "images/asymmetric-top-blue/front.jpg?v=4",
       "images/asymmetric-top-blue/back.jpg?v=4",
-      "images/asymmetric-top-blue/f93810fd506d417a8d54d0d4c7216608.gif?v=1"
+      "images/asymmetric-top-blue/f93810fd506d417a8d54d0d4c7216608.MOV"
     ],
     "description": "A one-shoulder top in aqua with a long tie strap. Soft ribbed knit with an asymmetric neckline.",
     "test_price_id": "price_1UDpTFBN7SXhPCp6BxY6bxl4"
@@ -178,11 +178,11 @@
     ],
     "price": 39,
     "image": "images/asymmetric-top-black/front.jpg?v=1",
-    "imageHover": "images/asymmetric-top-black/blackassymetricvideo.gif?v=1",
+    "imageHover": "images/asymmetric-top-black/blackassymetricvideo.MOV",
     "images": [
       "images/asymmetric-top-black/front.jpg?v=1",
-      "images/asymmetric-top-black/blackassymetricvideo.gif?v=1",
-      "images/asymmetric-top-black/f93810fd506d417a8d54d0d4c7216608.gif?v=1"
+      "images/asymmetric-top-black/blackassymetricvideo.MOV",
+      "images/asymmetric-top-black/f93810fd506d417a8d54d0d4c7216608.MOV"
     ],
     "description": "A one-shoulder top in black with a long tie strap and lettuce hem. Soft ribbed knit with an asymmetric neckline."
   },

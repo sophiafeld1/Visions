@@ -15,10 +15,11 @@ async function loadProducts() {
     const swatchColor = product.colorSwatch || "#d9d9d9";
     const hoverMedia = product.imageHover;
     const hasHover = Boolean(hoverMedia && hoverMedia !== product.image);
+    const hoverIsVideo = hasHover && isVideoSrc(hoverMedia);
 
     return `
       <article class="product-card">
-        <div class="product-card__media${hasHover ? " product-card__media--has-hover" : ""}">
+        <div class="product-card__media${hasHover ? " product-card__media--has-hover" : ""}${hoverIsVideo ? " product-card__media--has-hover-video" : ""}">
           <div class="product-card__image-stack">
             <img
               class="product-card__image product-card__image--primary"
@@ -28,7 +29,17 @@ async function loadProducts() {
             />
             ${
               hasHover
-                ? `<img
+                ? hoverIsVideo
+                  ? `<video
+              class="product-card__image product-card__image--hover product-card__video--hover"
+              src="${hoverMedia}"
+              playsinline
+              muted
+              loop
+              preload="metadata"
+              aria-hidden="true"
+            ></video>`
+                  : `<img
               class="product-card__image product-card__image--hover"
               src="${hoverMedia}"
               alt=""
@@ -65,6 +76,25 @@ async function loadProducts() {
       </article>
     `;
   }).join("");
+
+  grid.querySelectorAll(".product-card__media--has-hover-video").forEach((media) => {
+    const video = media.querySelector(".product-card__video--hover");
+    if (!video) return;
+
+    function playHoverVideo() {
+      video.play().catch(() => {});
+    }
+
+    function pauseHoverVideo() {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    media.addEventListener("mouseenter", playHoverVideo);
+    media.addEventListener("mouseleave", pauseHoverVideo);
+    media.addEventListener("focusin", playHoverVideo);
+    media.addEventListener("focusout", pauseHoverVideo);
+  });
 }
 
 function initQuickAddHandlers() {
