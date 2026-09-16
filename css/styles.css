@@ -1198,10 +1198,6 @@ body.cart-drawer-open {
   border-top: 1px solid var(--color-border);
 }
 
-.landing-main .instagram-section {
-  background: #ffffff;
-}
-
 .landing-intro__title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 2.75rem);
