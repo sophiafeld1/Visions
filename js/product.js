@@ -1,46 +1,9 @@
 function renderGalleryItem(src, product) {
-  if (isVideoSrc(src)) {
-    return `
-      <figure class="product-gallery-grid__item">
-        <video
-          class="product-gallery__video"
-          src="${src}"
-          playsinline
-          muted
-          loop
-          controls
-          aria-label="${product.name} video"
-        ></video>
-      </figure>
-    `;
-  }
-
   return `
     <figure class="product-gallery-grid__item">
       <img class="product-gallery__image" src="${src}" alt="${product.name}" />
     </figure>
   `;
-}
-
-function initGalleryVideos(container) {
-  const videos = container.querySelectorAll(".product-gallery__video");
-  if (!videos.length) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const video = entry.target;
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      });
-    },
-    { threshold: [0, 0.35, 0.6] }
-  );
-
-  videos.forEach((video) => observer.observe(video));
 }
 
 function initProductGallery(product) {
@@ -49,7 +12,6 @@ function initProductGallery(product) {
 
   const images = getProductImages(product);
   grid.innerHTML = images.map((src) => renderGalleryItem(src, product)).join("");
-  initGalleryVideos(grid);
 }
 
 function initProductTabs(product) {
