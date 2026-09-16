@@ -230,11 +230,11 @@
     ],
     "price": 29,
     "price_id": "price_1UDZLWBN7SXhPCp6yKbmzVud",
-    "image": "images/blue-polka/front.jpg?v=1",
-    "imageHover": "images/blue-polka/back.jpg?v=1",
+    "image": "images/blue-polka/front.jpg?v=3",
+    "imageHover": "images/blue-polka/back.jpg?v=3",
     "images": [
-      "images/blue-polka/front.jpg?v=1",
-      "images/blue-polka/back.jpg?v=1"
+      "images/blue-polka/front.jpg?v=3",
+      "images/blue-polka/back.jpg?v=3"
     ],
     "description": "Light blue polka dot halter top with a draped cowl neckline and open back.",
     "test_price_id": "price_1UDpTDBN7SXhPCp6iGFHRloE"
