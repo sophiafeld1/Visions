@@ -15,15 +15,15 @@
     ],
     "price": 35,
     "price_id": "price_1U4QQtBN7SXhPCp6Do9EgqYB",
-    "image": "images/v-neck-tie-top/worn-front.jpg",
+    "image": "images/black-tie-top/worn-front.jpg?v=1",
     "imageHover": "images/blacktopTIKTOK.mp4",
     "images": [
-      "images/v-neck-tie-top/worn-front.jpg",
+      "images/black-tie-top/worn-front.jpg?v=1",
       "images/blacktopTIKTOK.mp4",
-      "images/blacktopaltweartiefront.jpg",
-      "images/blacktoptiealtcrossed.jpg",
-      "images/blacktiebackUSE.jpg",
-      "images/blacktopback5.jpg"
+      "images/black-tie-top/blacktopaltweartiefront.jpg?v=1",
+      "images/black-tie-top/blacktoptiealtcrossed.jpg?v=1",
+      "images/black-tie-top/blacktiebackUSE.jpg?v=1",
+      "images/black-tie-top/blacktopback4.jpg?v=1"
     ],
     "description": "A relaxed v-neck with a soft tie detail. Lightweight and flattering.",
     "test_price_id": "price_1UDpTCBN7SXhPCp6VV7TwRyD"
@@ -44,13 +44,13 @@
     ],
     "price": 39,
     "price_id": "price_1UDZNYBN7SXhPCp6jDT4y9KK",
-    "image": "images/red-polka/model-front.jpg?v=3",
-    "imageHover": "images/red-polka/front.jpg?v=4",
+    "image": "images/red-polka/red-dot-1.jpg?v=1",
+    "imageHover": "images/red-polka/reddotbacktop.jpg?v=1",
     "images": [
-      "images/red-polka/model-front.jpg?v=3",
-      "images/red-polka/front.jpg?v=4",
-      "images/red-polka/tag-detail.jpg?v=4",
-      "images/red-polka/model-back.jpg?v=2"
+      "images/red-polka/red-dot-1.jpg?v=1",
+      "images/red-polka/reddotbacktop.jpg?v=1",
+      "images/red-polka/detailreddot.jpg?v=1",
+      "images/red-polka/selfiereddottop.jpg?v=1"
     ],
     "description": "Off-the-shoulder baggy red polka dot top in red and white with buttons on the sleeves.",
     "test_price_id": "price_1UDpTDBN7SXhPCp6DTHDReVG"
@@ -71,20 +71,21 @@
     ],
     "price": 70,
     "price_id": "price_1UDZPhBN7SXhPCp6oejODYNG",
-    "image": "images/yellowtopfront.jpg?v=4",
-    "imageHover": "images/IMG_9607.jpg?v=4",
+    "image": "images/grommettankyellow/cover.jpg?v=3",
+    "imageHover": "images/grommettankyellow/front.jpg?v=3",
     "images": [
-      "images/yellowtopfront.jpg?v=4",
-      "images/IMG_9607.jpg?v=4"
+      "images/grommettankyellow/cover.jpg?v=3",
+      "images/grommettankyellow/front.jpg?v=3",
+      "images/grommettankyellow/back.jpg?v=3"
     ],
     "description": "A yellow tank top with grommets along the top and a matching grommet headband. Fitted look with spagetti straps. made from 100% cotton.",
     "test_price_id": "price_1UDpTEBN7SXhPCp6icJQGSYp"
   },
   {
-    "id": "asymmetric-top-sage",
-    "name": "The Asymmetric Top in Aqua",
-    "color": "Blue",
-    "colorSwatch": "#9CAF88",
+    "id": "sparkly-slouchy-wide-neck-top",
+    "name": "The Slouch Top in Grey Sparkle",
+    "color": "Grey",
+    "colorSwatch": "#8a8a8a",
     "sizes": [
       "XS/S"
     ],
@@ -94,22 +95,22 @@
         "quantity": 1
       }
     ],
-    "price": 39,
-    "price_id": "price_1UDZSvBN7SXhPCp6BxKG3VGJ",
-    "image": "images/asymmetric-top/front.jpg?v=4",
-    "imageHover": "images/asymmetric-top/detail.jpg",
+    "price": 29,
+    "price_id": "price_1UDZQVBN7SXhPCp6MmT2guft",
+    "image": "images/sparkle-top/front.jpg?v=1",
+    "imageHover": "images/sparkle-top/back.jpg?v=1",
     "images": [
-      "images/asymmetric-top/front.jpg?v=4",
-      "images/asymmetric-top/detail.jpg"
+      "images/sparkle-top/front.jpg?v=1",
+      "images/sparkle-top/back.jpg?v=1"
     ],
-    "description": "A one-shoulder top in sage green with a long tie strap. Soft ribbed knit with an asymmetric neckline.",
-    "test_price_id": "price_1UDpTFBN7SXhPCp6BxY6bxl4"
+    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom.",
+    "test_price_id": "price_1UDpTEBN7SXhPCp6KxjZi4nL"
   },
   {
-    "id": "teal-skirt-low-rise-foldover",
-    "name": "Cleo Foldover Skirt in Aqua",
+    "id": "teal-skirt-top-set",
+    "name": "The Teal Skirt and Top Set in Aqua",
     "color": "Teal",
-    "colorSwatch": "#008080",
+    "colorSwatch": "#7eb8c9",
     "sizes": [
       "XS/S"
     ],
@@ -119,22 +120,22 @@
         "quantity": 1
       }
     ],
-    "price": 50,
+    "price": 89,
     "price_id": "price_1UDZSUBN7SXhPCp65nDCGghn",
-    "image": "images/teal-skirt/front.jpg?v=4",
-    "imageHover": "images/teal-skirt/detail.jpg",
+    "image": "images/teal-skirt-top-set/cover.jpg?v=4",
+    "imageHover": "images/teal-skirt-top-set/side.jpg?v=4",
     "images": [
-      "images/teal-skirt/front.jpg?v=4",
-      "images/teal-skirt/alt-front.jpg?v=4",
-      "images/teal-skirt/detail.jpg",
-      "images/teal-skirt/video.mov?v=2"
+      "images/teal-skirt-top-set/cover.jpg?v=4",
+      "images/teal-skirt-top-set/side.jpg?v=4",
+      "images/teal-skirt-top-set/back.jpg?v=4",
+      "images/teal-skirt-top-set/detail.jpg?v=4"
     ],
-    "description": "A low rise foldover skirt in teal. Foldover waistband with a white button. Lightweight and stretchy material.",
+    "description": "A matching aqua peplum crossover top and Cleo foldover low-rise skirt. Sold together as a set.",
     "test_price_id": "price_1UDpTFBN7SXhPCp6uDF8UlNJ"
   },
   {
-    "id": "peplum-top-aqua",
-    "name": "The Peplum V Neck Crossover Top in Aqua",
+    "id": "asymmetric-top-sage",
+    "name": "The Asymmetric Top in Aqua",
     "color": "Blue",
     "colorSwatch": "#7eb8c9",
     "sizes": [
@@ -147,16 +148,40 @@
       }
     ],
     "price": 39,
-    "price_id": "price_1UDZVGBN7SXhPCp6NHx2jezr",
-    "image": "images/peplum-top/front.jpg?v=4",
-    "imageHover": "images/peplum-top/front-alt.jpg?v=4",
+    "price_id": "price_1UDZSvBN7SXhPCp6BxKG3VGJ",
+    "image": "images/asymmetric-top-blue/front.jpg?v=4",
+    "imageHover": "images/asymmetric-top-blue/back.jpg?v=4",
     "images": [
-      "images/peplum-top/front.jpg?v=4",
-      "images/peplum-top/front-alt.jpg?v=4",
-      "images/peplum-top/back.jpg?v=4"
+      "images/asymmetric-top-blue/front.jpg?v=4",
+      "images/asymmetric-top-blue/back.jpg?v=4",
+      "images/asymmetric-top-blue/f93810fd506d417a8d54d0d4c7216608.MOV"
     ],
-    "description": "A light blue wrap-front top with a gathered peplum hem. V neck crossover top.",
-    "test_price_id": "price_1UDpTFBN7SXhPCp6osygqjHI"
+    "description": "A one-shoulder top in aqua with a long tie strap. Soft ribbed knit with an asymmetric neckline.",
+    "test_price_id": "price_1UDpTFBN7SXhPCp6BxY6bxl4"
+  },
+  {
+    "id": "asymmetric-top-black",
+    "name": "The Asymmetric Top in Black",
+    "color": "Black",
+    "colorSwatch": "#1a1a1a",
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
+    "price": 39,
+    "image": "images/asymmetric-top-black/front.jpg?v=1",
+    "imageHover": "images/asymmetric-top-black/blackassymetricvideo.MOV",
+    "images": [
+      "images/asymmetric-top-black/front.jpg?v=1",
+      "images/asymmetric-top-black/blackassymetricvideo.MOV",
+      "images/asymmetric-top-black/f93810fd506d417a8d54d0d4c7216608.MOV"
+    ],
+    "description": "A one-shoulder top in black with a long tie strap and lettuce hem. Soft ribbed knit with an asymmetric neckline."
   },
   {
     "id": "stripe-set-blush",
@@ -174,13 +199,14 @@
     ],
     "price": 60,
     "price_id": "price_1UDZWEBN7SXhPCp6ITi6oDpM",
-    "image": "images/stripe-set/vneck.jpg?v=4",
-    "imageHover": "images/stripe-set/front.jpg?v=4",
+    "image": "images/pinkstripebolero/bolero-front.jpg?v=5",
+    "imageHover": "images/pinkstripebolero/bolero-front-close.jpg?v=5",
     "images": [
-      "images/stripe-set/vneck.jpg?v=4",
-      "images/stripe-set/front.jpg?v=4",
-      "images/stripe-set/vneck-alt.jpg?v=4",
-      "images/stripe-set/scoop.jpg?v=4"
+      "images/pinkstripebolero/bolero-front.jpg?v=5",
+      "images/pinkstripebolero/detailvidpinkstripebolero.MOV",
+      "images/pinkstripebolero/bolero-front-close.jpg?v=5",
+      "images/pinkstripebolero/tank-front.jpg?v=5",
+      "images/pinkstripebolero/tank-back.jpg?v=5"
     ],
     "description": "A pink and white striped set with a lace-trim blush pink and whte stripe tube top and matching boloro with buttons.",
     "test_price_id": "price_1UDpTGBN7SXhPCp6Z5XaYlKH"
@@ -214,34 +240,6 @@
     "test_price_id": "price_1UDpTGBN7SXhPCp6xcdMcPWj"
   },
   {
-    "id": "sparkly-slouchy-wide-neck-top",
-    "name": "The Slouch Top in Grey Sparkle",
-    "color": "Grey",
-    "colorSwatch": "#8a8a8a",
-    "sizes": [
-      "XS/S"
-    ],
-    "inventory": [
-      {
-        "size": "XS/S",
-        "quantity": 1
-      }
-    ],
-    "price": 29,
-    "price_id": "price_1UDZQVBN7SXhPCp6MmT2guft",
-    "image": "images/sparkletopfront.jpg?v=5",
-    "imageHover": "images/sparkle-top/front.jpg?v=1",
-    "images": [
-      "images/sparkletopfront.jpg?v=5",
-      "images/sparkle-top/front.jpg?v=1",
-      "images/sparkle-top/back.jpg?v=1",
-      "images/sparkletopfront2.jpg?v=4",
-      "images/sparkletopback.jpg?v=4"
-    ],
-    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom.",
-    "test_price_id": "price_1UDpTEBN7SXhPCp6KxjZi4nL"
-  },
-  {
     "id": "blue-polka-dot-halter-top",
     "name": "The Polka Cowl Top in Sky Blue",
     "color": "Blue",
@@ -257,14 +255,11 @@
     ],
     "price": 29,
     "price_id": "price_1UDZLWBN7SXhPCp6yKbmzVud",
-    "image": "images/bluepolkafront2.jpg?v=4",
-    "imageHover": "images/polkablueback.jpg?v=4",
+    "image": "images/blue-polka/front.jpg?v=1",
+    "imageHover": "images/blue-polka/back.jpg?v=1",
     "images": [
-      "images/bluepolkafront2.jpg?v=4",
-      "images/IMG_9602.jpg?v=4",
-      "images/bluepolkaside.jpg?v=4",
-      "images/bluepolkaside2.jpg?v=4",
-      "images/polkablueback.jpg?v=4"
+      "images/blue-polka/front.jpg?v=1",
+      "images/blue-polka/back.jpg?v=1"
     ],
     "description": "Light blue polka dot halter top with a draped cowl neckline and open back.",
     "test_price_id": "price_1UDpTDBN7SXhPCp6iGFHRloE"
@@ -285,12 +280,11 @@
     ],
     "price": 29,
     "price_id": "price_1UDZMUBN7SXhPCp6mQSRJfvH",
-    "image": "images/2pcbluetopfront.jpg?v=5",
-    "imageHover": "images/blue-polka/front.jpg?v=1",
+    "image": "images/bucklebluepolka/front.jpg?v=2",
+    "imageHover": "images/bucklebluepolka/back.jpg?v=2",
     "images": [
-      "images/2pcbluetopfront.jpg?v=5",
-      "images/blue-polka/front.jpg?v=1",
-      "images/blue-polka/back.jpg?v=1"
+      "images/bucklebluepolka/front.jpg?v=2",
+      "images/bucklebluepolka/back.jpg?v=2"
     ],
     "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck.",
     "test_price_id": "price_1UDpTDBN7SXhPCp6qlvtPMLp"

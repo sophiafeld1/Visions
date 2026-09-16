@@ -278,6 +278,7 @@ main:has(.about-page) {
 .product-card__image--primary {
   position: relative;
   z-index: 1;
+  opacity: 1;
 }
 
 .product-card__image--hover {
