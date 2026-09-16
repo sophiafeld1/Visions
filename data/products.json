@@ -56,6 +56,34 @@
     "test_price_id": "price_1UDpTDBN7SXhPCp6DTHDReVG"
   },
   {
+    "id": "stripe-set-blush",
+    "name": "The Striped Boloro and Lace Tube Set in Blush and White",
+    "color": "Blush",
+    "colorSwatch": "#f4c2c2",
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
+    "price": 60,
+    "price_id": "price_1UDZWEBN7SXhPCp6ITi6oDpM",
+    "image": "images/pinkstripebolero/bolero-front.jpg?v=5",
+    "imageHover": "images/pinkstripebolero/bolero-front-close.jpg?v=5",
+    "images": [
+      "images/pinkstripebolero/bolero-front.jpg?v=5",
+      "images/pinkstripebolero/detailvidpinkstripebolero.MOV",
+      "images/pinkstripebolero/bolero-front-close.jpg?v=5",
+      "images/pinkstripebolero/tank-front.jpg?v=5",
+      "images/pinkstripebolero/tank-back.jpg?v=5"
+    ],
+    "description": "A pink and white striped set with a lace-trim blush pink and whte stripe tube top and matching boloro with buttons.",
+    "test_price_id": "price_1UDpTGBN7SXhPCp6Z5XaYlKH"
+  },
+  {
     "id": "yellow-grommet-tank-headband",
     "name": "The Grommet Tank Set in Butter",
     "color": "Yellow",
@@ -80,31 +108,6 @@
     ],
     "description": "A yellow tank top with grommets along the top and a matching grommet headband. Fitted look with spagetti straps. made from 100% cotton.",
     "test_price_id": "price_1UDpTEBN7SXhPCp6icJQGSYp"
-  },
-  {
-    "id": "sparkly-slouchy-wide-neck-top",
-    "name": "The Slouch Top in Grey Sparkle",
-    "color": "Grey",
-    "colorSwatch": "#8a8a8a",
-    "sizes": [
-      "XS/S"
-    ],
-    "inventory": [
-      {
-        "size": "XS/S",
-        "quantity": 1
-      }
-    ],
-    "price": 29,
-    "price_id": "price_1UDZQVBN7SXhPCp6MmT2guft",
-    "image": "images/sparkle-top/front.jpg?v=1",
-    "imageHover": "images/sparkle-top/back.jpg?v=1",
-    "images": [
-      "images/sparkle-top/front.jpg?v=1",
-      "images/sparkle-top/back.jpg?v=1"
-    ],
-    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom.",
-    "test_price_id": "price_1UDpTEBN7SXhPCp6KxjZi4nL"
   },
   {
     "id": "teal-skirt-top-set",
@@ -184,34 +187,6 @@
     "description": "A one-shoulder top in black with a long tie strap and lettuce hem. Soft ribbed knit with an asymmetric neckline."
   },
   {
-    "id": "stripe-set-blush",
-    "name": "The Striped Boloro and Lace Tube Set in Blush and White",
-    "color": "Blush",
-    "colorSwatch": "#f4c2c2",
-    "sizes": [
-      "XS/S"
-    ],
-    "inventory": [
-      {
-        "size": "XS/S",
-        "quantity": 1
-      }
-    ],
-    "price": 60,
-    "price_id": "price_1UDZWEBN7SXhPCp6ITi6oDpM",
-    "image": "images/pinkstripebolero/bolero-front.jpg?v=5",
-    "imageHover": "images/pinkstripebolero/bolero-front-close.jpg?v=5",
-    "images": [
-      "images/pinkstripebolero/bolero-front.jpg?v=5",
-      "images/pinkstripebolero/detailvidpinkstripebolero.MOV",
-      "images/pinkstripebolero/bolero-front-close.jpg?v=5",
-      "images/pinkstripebolero/tank-front.jpg?v=5",
-      "images/pinkstripebolero/tank-back.jpg?v=5"
-    ],
-    "description": "A pink and white striped set with a lace-trim blush pink and whte stripe tube top and matching boloro with buttons.",
-    "test_price_id": "price_1UDpTGBN7SXhPCp6Z5XaYlKH"
-  },
-  {
     "id": "pink-lace-bikini-lime",
     "name": "The Picot Lace Bikini in Lime",
     "color": "Lime",
@@ -288,5 +263,29 @@
     ],
     "description": "Light blue polka dot two-piece halter top with a buckled front band and draped cowl neck.",
     "test_price_id": "price_1UDpTDBN7SXhPCp6qlvtPMLp"
+  },
+  {
+    "id": "sparkly-slouchy-wide-neck-top",
+    "name": "The Slouch Top in Grey Sparkle",
+    "color": "Grey",
+    "colorSwatch": "#8a8a8a",
+    "sizes": [
+      "XS/S"
+    ],
+    "inventory": [
+      {
+        "size": "XS/S",
+        "quantity": 1
+      }
+    ],
+    "price": 29,
+    "price_id": "price_1UDZQVBN7SXhPCp6MmT2guft",
+    "image": "images/sparkle-top/front.jpg?v=2",
+    "imageHover": "images/sparkle-top/front.jpg?v=2",
+    "images": [
+      "images/sparkle-top/front.jpg?v=2"
+    ],
+    "description": "A sparkly slouchy wide-neck baggy top in grey, black, white, and silver. Big sleeves and a wide band of fabric at the bottom.",
+    "test_price_id": "price_1UDpTEBN7SXhPCp6KxjZi4nL"
   }
 ]
