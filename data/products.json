@@ -124,7 +124,7 @@
       }
     ],
     "price": 89,
-    "price_id": "price_1UDZSUBN7SXhPCp65nDCGghn",
+    "stripe_product_id": "prod_VE1VxH66fA8FLB",
     "image": "images/teal-skirt-top-set/cover.jpg?v=4",
     "imageHover": "images/teal-skirt-top-set/side.jpg?v=4",
     "images": [
@@ -133,8 +133,7 @@
       "images/teal-skirt-top-set/back.jpg?v=4",
       "images/teal-skirt-top-set/detail.jpg?v=4"
     ],
-    "description": "A matching aqua peplum crossover top and Cleo foldover low-rise skirt. Sold together as a set.",
-    "test_price_id": "price_1UDpTFBN7SXhPCp6uDF8UlNJ"
+    "description": "A matching aqua peplum crossover top and Cleo foldover low-rise skirt. Sold together as a set."
   },
   {
     "id": "asymmetric-top-sage",
@@ -177,6 +176,7 @@
       }
     ],
     "price": 39,
+    "stripe_product_id": "prod_VHIiTyzVKFJiYC",
     "image": "images/asymmetric-top-black/front.jpg?v=1",
     "imageHover": "images/asymmetric-top-black/blackassymetricvideo.MOV",
     "images": [
