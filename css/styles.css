@@ -1603,67 +1603,75 @@ body.cart-drawer-open {
 }
 
 .landing-hero {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   background: #ffffff;
-  min-height: calc(100svh - var(--header-height));
-  max-height: calc(100svh - var(--header-height));
 }
 
 .landing-hero__media {
   position: relative;
-  flex: 1;
-  min-height: 0;
   width: 100%;
+  height: clamp(200px, 34vh, 360px);
   overflow: hidden;
   line-height: 0;
-  background: #ffffff;
+  background: #f3eee4;
 }
 
 .landing-hero__shop-btn {
-  flex-shrink: 0;
-  display: block;
-  width: 100%;
-  padding: clamp(1.25rem, 3vw, 1.75rem) var(--page-padding);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-style: normal;
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: none;
-  text-align: center;
+  position: absolute;
+  left: clamp(1rem, 3vw, 2.25rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
-  background: var(--color-text);
-  border: none;
-  border-radius: 0;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--color-text);
+  border-radius: 999px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .landing-hero__shop-btn:hover {
-  background: #2a3a5c;
+  background: var(--color-text);
   color: #ffffff;
 }
 
 .landing-featured {
-  padding: clamp(1.5rem, 4vw, 2.5rem) var(--page-padding) clamp(2rem, 5vw, 3rem);
+  padding: 0 0 clamp(2rem, 5vw, 3rem);
   background: #ffffff;
+}
+
+.landing-featured__intro {
+  margin: 0;
+  padding: clamp(1rem, 2.5vw, 1.35rem) var(--page-padding);
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .landing-featured__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(0.75rem, 2vw, 1.25rem);
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 0;
+  max-width: none;
+  margin: 0;
 }
 
 .landing-featured__item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -1677,20 +1685,10 @@ body.cart-drawer-open {
 }
 
 .landing-featured__label {
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
-  font-style: italic;
-  text-align: center;
-  color: var(--color-text);
-  letter-spacing: 0.02em;
+  display: none;
 }
 
-.landing-featured__item:hover .landing-featured__label {
-  opacity: 0.65;
-}
-
-.landing-hero__video,
-.landing-hero__image {
+.landing-hero__video {
   display: block;
   width: 100%;
   height: 100%;
@@ -1698,9 +1696,20 @@ body.cart-drawer-open {
   max-height: none;
   aspect-ratio: unset;
   object-fit: cover;
-  object-position: center center;
+  object-position: left center;
   background: #ffffff;
   pointer-events: none;
+}
+
+.landing-hero__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  background: #f3eee4;
 }
 
 .landing-hero__banner {
@@ -1905,26 +1914,26 @@ body.cart-drawer-open {
     justify-self: center;
   }
 
-  .landing-hero {
-    min-height: auto;
-    max-height: none;
-  }
-
-  .landing-hero__media {
-    flex: 0 0 auto;
+  .landing-hero__video {
+    width: 100%;
+    height: 100%;
     aspect-ratio: 4 / 5;
     max-height: min(48svh, 380px);
   }
 
-  .landing-hero__video,
-  .landing-hero__image {
-    width: 100%;
-    height: 100%;
+  .landing-hero__media {
+    height: clamp(160px, 28vh, 260px);
   }
 
   .landing-hero__shop-btn {
-    padding: 1rem var(--page-padding);
-    font-size: 1.35rem;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0.7rem 1.25rem;
+    font-size: 0.68rem;
+  }
+
+  .landing-featured__intro {
+    font-size: 0.68rem;
   }
 
   .landing-hero__banner {
@@ -1938,7 +1947,7 @@ body.cart-drawer-open {
 
   .landing-featured__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0;
   }
 
   .preview-access-bar__controls {
