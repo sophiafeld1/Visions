@@ -57,7 +57,7 @@
   },
   {
     "id": "stripe-set-blush",
-    "name": "The Striped Boloro and Lace Tube Set in Blush and White",
+    "name": "The Striped Bolero and Lace Tube Set in Blush and White",
     "color": "Blush",
     "colorSwatch": "#f4c2c2",
     "sizes": [
@@ -106,7 +106,7 @@
       "images/grommettankyellow/front.jpg?v=3",
       "images/grommettankyellow/back.jpg?v=3"
     ],
-    "description": "A yellow tank top with grommets along the top and a matching grommet headband. Fitted look with spagetti straps. made from 100% cotton.",
+    "description": "A yellow tank top with grommets along the top and a matching grommet headband. Fitted look with spaghetti straps. Made from 100% cotton.",
     "test_price_id": "price_1UDpTEBN7SXhPCp6icJQGSYp"
   },
   {
@@ -124,6 +124,7 @@
       }
     ],
     "price": 89,
+    "price_id": "price_1UDZSUBN7SXhPCp65nDCGghn",
     "stripe_product_id": "prod_VE1VxH66fA8FLB",
     "image": "images/teal-skirt-top-set/cover.jpg?v=4",
     "imageHover": "images/teal-skirt-top-set/side.jpg?v=4",
@@ -133,7 +134,9 @@
       "images/teal-skirt-top-set/back.jpg?v=4",
       "images/teal-skirt-top-set/detail.jpg?v=4"
     ],
-    "description": "A matching aqua peplum crossover top and Cleo foldover low-rise skirt. Sold together as a set."
+    "description": "A matching aqua peplum crossover top and Cleo foldover low-rise skirt. Sold together as a set.",
+    "test_price_id": "price_1UGkK2BN7SXhPCp6yNHym7NH",
+    "test_stripe_product_id": "prod_VHIv04g6vPfQTF"
   },
   {
     "id": "asymmetric-top-sage",
@@ -176,6 +179,7 @@
       }
     ],
     "price": 39,
+    "price_id": "price_1UGk6gBN7SXhPCp6MlC3E2T5",
     "stripe_product_id": "prod_VHIiTyzVKFJiYC",
     "image": "images/asymmetric-top-black/front.jpg?v=1",
     "imageHover": "images/asymmetric-top-black/blackassymetricvideo.MOV",
@@ -184,7 +188,9 @@
       "images/asymmetric-top-black/blackassymetricvideo.MOV",
       "images/asymmetric-top-black/f93810fd506d417a8d54d0d4c7216608.MOV"
     ],
-    "description": "A one-shoulder top in black with a long tie strap and lettuce hem. Soft ribbed knit with an asymmetric neckline."
+    "description": "A one-shoulder top in black with a long tie strap and lettuce hem. Soft ribbed knit with an asymmetric neckline.",
+    "test_price_id": "price_1UGkK3BN7SXhPCp67thQLMrt",
+    "test_stripe_product_id": "prod_VHIvS2LFmEOEHq"
   },
   {
     "id": "pink-lace-bikini-lime",

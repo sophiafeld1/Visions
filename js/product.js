@@ -115,13 +115,31 @@ async function loadProductPage() {
 
   initProductGallery(product);
   initProductTabs(product);
-  document.getElementById("product-price").textContent = formatPrice(product.price);
 
-  const sizes = product.sizes?.length ? product.sizes : ["XS"];
+  const soldOut = isProductSoldOut(product);
+  const priceEl = document.getElementById("product-price");
+  priceEl.textContent = formatProductPrice(product);
+  priceEl.classList.toggle("product-detail__price--sold-out", soldOut);
+
+  const sizes = getProductSizes(product);
   let selectedSize = sizes.find((size) => getInventoryQuantity(product, size) > 0) || sizes[0];
 
   const sizeContainer = document.getElementById("product-sizes");
   const stockLabel = document.getElementById("product-stock");
+  const addToCartBtn = document.getElementById("add-to-cart-btn");
+
+  if (soldOut) {
+    sizeContainer.innerHTML = sizes
+      .map(
+        (size) =>
+          `<button type="button" class="size-option" data-size="${size}" disabled>${size}</button>`
+      )
+      .join("");
+    stockLabel.textContent = "";
+    addToCartBtn.disabled = true;
+    addToCartBtn.textContent = "Sold out";
+    return;
+  }
 
   sizeContainer.innerHTML = sizes
     .map((size) => {
@@ -145,13 +163,17 @@ async function loadProductPage() {
         option.classList.toggle("size-option--active", option.dataset.size === selectedSize);
       });
       updateStockLabel();
+      addToCartBtn.disabled = getInventoryQuantity(product, selectedSize) <= 0;
     });
   });
 
   updateStockLabel();
+  addToCartBtn.disabled = getInventoryQuantity(product, selectedSize) <= 0;
 
-  const addToCartBtn = document.getElementById("add-to-cart-btn");
   addToCartBtn.addEventListener("click", () => {
+    if (addToCartBtn.disabled) {
+      return;
+    }
     if (addToCart(product.id, selectedSize)) {
       openCartDrawer();
     }

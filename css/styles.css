@@ -416,6 +416,13 @@ main:has(.about-page) {
   margin-bottom: 0.6rem;
 }
 
+.product-card__price--sold-out,
+.product-detail__price--sold-out {
+  color: #8a4b45;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
 .product-card__swatch {
   display: block;
   width: 16px;

@@ -1,13 +1,15 @@
 const { loadProductsFromFile } = require("../lib/products-store");
+const { mergeLiveInventory } = require("../lib/inventory-store");
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   if (req.method !== "GET") {
     res.status(405).json({ error: "Method not allowed" });
     return;
   }
 
   try {
-    res.status(200).json(loadProductsFromFile());
+    const products = await mergeLiveInventory(loadProductsFromFile());
+    res.status(200).json(products);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

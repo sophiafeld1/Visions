@@ -1,5 +1,5 @@
-require("dotenv").config();
 const { createCheckoutSession } = require("../lib/checkout");
+const { getStripeDiagnostics } = require("../lib/stripe-diagnostics");
 
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
@@ -15,6 +15,9 @@ module.exports = async (req, res) => {
     const result = await createCheckoutSession({ items, origin });
     res.status(200).json(result);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      error: error.message,
+      stripe: getStripeDiagnostics(),
+    });
   }
 };

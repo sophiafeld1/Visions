@@ -37,8 +37,8 @@ function addToCart(productId, size = "XS", quantity = 1) {
   const product = getProductById(productId);
   const available = getInventoryQuantity(product, size);
 
-  if (!product || available <= 0) {
-    alert(`Size ${size} is out of stock.`);
+  if (!product || isProductSoldOut(product) || available <= 0) {
+    alert(`${product?.name || "This item"} is sold out.`);
     return false;
   }
 

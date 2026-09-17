@@ -10,7 +10,8 @@ async function loadProducts() {
   }
 
   grid.innerHTML = PRODUCTS.map((product) => {
-    const sizes = product.sizes?.length ? product.sizes : ["XS"];
+    const sizes = getProductSizes(product);
+    const soldOut = isProductSoldOut(product);
     const colorLabel = product.color ? ` · ${product.color.toLowerCase()}` : "";
     const swatchColor = product.colorSwatch || "#d9d9d9";
     const hoverMedia = product.imageHover;
@@ -18,7 +19,7 @@ async function loadProducts() {
     const hoverIsVideo = hasHover && isVideoSrc(hoverMedia);
 
     return `
-      <article class="product-card">
+      <article class="product-card${soldOut ? " product-card--sold-out" : ""}">
         <div class="product-card__media${hasHover ? " product-card__media--has-hover" : ""}${hoverIsVideo ? " product-card__media--has-hover-video" : ""}">
           <div class="product-card__image-stack">
             <img
@@ -54,7 +55,10 @@ async function loadProducts() {
               aria-label="View ${product.name}"
             ></a>
           </div>
-          <div class="product-card__quick-add">
+          ${
+            soldOut
+              ? ""
+              : `<div class="product-card__quick-add">
             <span class="product-card__quick-add-label">Quick Add</span>
             <div class="product-card__sizes">
               ${sizes
@@ -64,13 +68,14 @@ async function loadProducts() {
                 })
                 .join("")}
             </div>
-          </div>
+          </div>`
+          }
         </div>
         <div class="product-card__info">
           <a class="product-card__title-link" href="product.html?id=${encodeURIComponent(product.id)}">
             <h2 class="product-card__name">${product.name}${colorLabel}</h2>
           </a>
-          <p class="product-card__price">$${product.price.toFixed(2)}</p>
+          <p class="product-card__price${soldOut ? " product-card__price--sold-out" : ""}">${formatProductPrice(product)}</p>
           <span class="product-card__swatch" style="background-color: ${swatchColor}" aria-hidden="true"></span>
         </div>
       </article>

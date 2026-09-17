@@ -9,10 +9,12 @@
     "db:update": "node server/update-inventory.js",
     "vercel": "vercel",
     "deploy": "vercel --prod",
-    "sitemap": "node scripts/generate-sitemap.js"
+    "sitemap": "node scripts/generate-sitemap.js",
+    "inventory:seed": "node scripts/seed-inventory.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "@vercel/kv": "^3.0.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "pg": "^8.13.3",

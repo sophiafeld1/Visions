@@ -28,6 +28,25 @@ function getInventoryQuantity(product, size) {
   return entry ? entry.quantity : 0;
 }
 
+function getProductSizes(product) {
+  if (product?.sizes?.length) {
+    return product.sizes;
+  }
+  return (product?.inventory || []).map((entry) => entry.size);
+}
+
+function isProductSoldOut(product) {
+  const sizes = getProductSizes(product);
+  if (!sizes.length) {
+    return true;
+  }
+  return sizes.every((size) => getInventoryQuantity(product, size) <= 0);
+}
+
+function formatProductPrice(product) {
+  return isProductSoldOut(product) ? "Sold out" : `$${product.price.toFixed(2)}`;
+}
+
 function getAvailableSizes(product) {
   if (!product) return [];
   return (product.inventory || [])

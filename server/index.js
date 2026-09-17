@@ -3,12 +3,35 @@ const express = require("express");
 const path = require("path");
 const { query } = require("./db");
 const { loadProductsFromFile } = require("../lib/products-store");
+const { mergeLiveInventory } = require("../lib/inventory-store");
 const { createCheckoutSession } = require("../lib/checkout");
 const { getCheckoutSessionSummary } = require("../lib/get-checkout-session");
+const { handleStripeWebhookEvent, releaseCheckoutSessionById } = require("../lib/stripe-webhook-handlers");
+const Stripe = require("stripe");
 
 const app = express();
 const port = Number(process.env.PORT || 5500);
 const root = path.join(__dirname, "..");
+
+app.post("/api/stripe-webhook", express.raw({ type: "application/json" }), async (req, res) => {
+  const secretKey = process.env.STRIPE_SECRET_KEY;
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
+  if (!secretKey || !webhookSecret) {
+    res.status(500).json({ error: "Stripe webhook is not configured." });
+    return;
+  }
+
+  try {
+    const stripe = new Stripe(secretKey);
+    const signature = req.headers["stripe-signature"];
+    const event = stripe.webhooks.constructEvent(req.body, signature, webhookSecret);
+    await handleStripeWebhookEvent(event);
+    res.json({ received: true });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
 
 app.use(express.json());
 
@@ -45,7 +68,7 @@ async function fetchProducts() {
   try {
     return await fetchProductsFromDb();
   } catch {
-    return loadProductsFromFile();
+    return mergeLiveInventory(loadProductsFromFile());
   }
 }
 
@@ -95,6 +118,18 @@ app.post("/api/create-checkout-session", async (req, res) => {
     const origin = `${req.protocol}://${req.get("host")}`;
     const result = await createCheckoutSession({ items: req.body?.items, origin });
     res.json(result);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+app.post("/api/release-checkout-session", async (req, res) => {
+  try {
+    const session = await releaseCheckoutSessionById(req.body?.sessionId);
+    res.json({
+      released: session.payment_status !== "paid",
+      paymentStatus: session.payment_status,
+    });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

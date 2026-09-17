@@ -107,10 +107,18 @@ function renderFilledCart(container, items) {
       }
       await startCheckout(getCart());
     } catch (error) {
-      checkoutError.textContent = error.message;
-      checkoutError.hidden = false;
-      checkoutBtn.disabled = false;
-      checkoutBtn.textContent = "Checkout";
+      await loadProductsFromApi();
+      await renderCartDrawer();
+      const refreshedError = document.querySelector("#checkout-error");
+      const refreshedBtn = document.querySelector("#checkout-btn");
+      if (refreshedError) {
+        refreshedError.textContent = error.message;
+        refreshedError.hidden = false;
+      }
+      if (refreshedBtn) {
+        refreshedBtn.disabled = false;
+        refreshedBtn.textContent = "Checkout";
+      }
     }
   });
 
