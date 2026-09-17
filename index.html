@@ -93,20 +93,14 @@
     <main class="landing-main">
       <section class="landing-hero" aria-label="Visions Studio Handmade Clothing hero">
         <div class="landing-hero__media">
-          <video
-            id="landing-hero-video"
-            class="landing-hero__video"
-            autoplay
-            muted
-            loop
-            playsinline
-            webkit-playsinline
-            disablepictureinpicture
-            preload="auto"
+          <img
+            class="landing-hero__image"
+            src="images/home/hero.jpg?v=1"
+            alt=""
             aria-hidden="true"
-          >
-            <source src="images/home/hero-animation-hero.mp4?v=5" type="video/mp4" />
-          </video>
+            loading="eager"
+            decoding="async"
+          />
         </div>
         <a class="landing-hero__shop-btn" href="shop.html">Shop Now</a>
       </section>
@@ -225,7 +219,6 @@
       </div>
     </footer>
 
-    <script src="js/home-landing.js?v=2"></script>
     <script src="js/instagram.js"></script>
     <script src="js/instagram-carousel.js"></script>
     <script src="js/vercel-analytics.js"></script>
