@@ -10,7 +10,9 @@
     "vercel": "vercel",
     "deploy": "vercel --prod",
     "sitemap": "node scripts/generate-sitemap.js",
-    "inventory:seed": "node scripts/seed-inventory.js"
+    "inventory:seed": "node scripts/seed-inventory.js",
+    "test": "node --test --test-concurrency=1 tests/**/*.test.js",
+    "test:inventory": "node --test --test-concurrency=1 tests/inventory-store.test.js tests/checkout-inventory.test.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
