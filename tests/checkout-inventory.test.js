@@ -83,6 +83,21 @@ describe("checkout inventory validation", { concurrency: 1 }, () => {
     );
   });
 
+  it("skips shipping fees when the cart only contains noShipping products", () => {
+    assert.equal(checkout.cartRequiresShipping([{ id: "checkout-test-item" }]), false);
+    assert.equal(
+      checkout.cartRequiresShipping([{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }]),
+      true
+    );
+    assert.equal(
+      checkout.cartRequiresShipping([
+        { id: "checkout-test-item", size: "XS/S", quantity: 1 },
+        { id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 },
+      ]),
+      true
+    );
+  });
+
   it("prevents a second shopper from checking out after the first reserves the last unit", async () => {
     await inventory.reserveItems([{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }]);
 

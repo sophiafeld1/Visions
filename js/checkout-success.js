@@ -22,8 +22,8 @@ function renderReceipt(summary) {
     : "";
 
   const emailHtml = summary.email
-    ? `<p class="checkout-page__text">Confirmation sent to <strong>${summary.email}</strong>.</p>`
-    : "";
+    ? `<p class="checkout-page__text">Stripe will email your receipt to <strong>${summary.email}</strong> shortly.</p>`
+    : `<p class="checkout-page__text">Stripe will email your receipt if you entered an email at checkout.</p>`;
 
   const receiptLinkHtml = summary.receiptUrl
     ? `<a class="btn btn--outline btn--full" href="${summary.receiptUrl}" target="_blank" rel="noopener noreferrer">View Stripe Receipt</a>`
