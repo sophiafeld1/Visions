@@ -1624,9 +1624,10 @@ body.cart-drawer-open {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.6rem;
+  min-height: 3.25rem;
+  padding: 1rem 2.25rem;
   font-family: var(--font-accent);
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1928,8 +1929,9 @@ body.cart-drawer-open {
   .landing-hero__shop-btn {
     left: 1rem;
     bottom: 1rem;
-    padding: 0.7rem 1.25rem;
-    font-size: 0.68rem;
+    min-height: 2.85rem;
+    padding: 0.85rem 1.75rem;
+    font-size: 0.82rem;
   }
 
   .landing-featured__intro {

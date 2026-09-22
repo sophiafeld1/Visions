@@ -18,8 +18,19 @@ function isVideoSrc(src) {
   return /\.(mp4|webm|mov)(\?|$)/i.test(src);
 }
 
+const PRODUCT_ID_ALIASES = {
+  "checkout-test-item-2": "checkout-test-item",
+  "checkout-test-item-3": "checkout-test-item",
+  "checkout-test-item-4": "checkout-test-item",
+};
+
+function resolveProductId(id) {
+  return PRODUCT_ID_ALIASES[id] || id;
+}
+
 function getProductById(id) {
-  return PRODUCTS.find((product) => product.id === id);
+  const resolvedId = resolveProductId(id);
+  return PRODUCTS.find((product) => product.id === resolvedId);
 }
 
 function getInventoryQuantity(product, size) {
@@ -76,6 +87,9 @@ async function loadProductsFromApi() {
     const products = await response.json();
     if (products.length) {
       PRODUCTS = products;
+      if (typeof sanitizeCart === "function") {
+        sanitizeCart();
+      }
       return PRODUCTS;
     }
   } catch {
@@ -88,6 +102,9 @@ async function loadProductsFromApi() {
       const products = await response.json();
       if (products.length) {
         PRODUCTS = products;
+        if (typeof sanitizeCart === "function") {
+          sanitizeCart();
+        }
         return PRODUCTS;
       }
     }
@@ -96,6 +113,9 @@ async function loadProductsFromApi() {
   }
 
   PRODUCTS = [...STATIC_PRODUCTS];
+  if (typeof sanitizeCart === "function") {
+    sanitizeCart();
+  }
   return PRODUCTS;
 }
 

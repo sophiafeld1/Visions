@@ -11,7 +11,9 @@ async function releaseCancelledCheckoutSession() {
       body: JSON.stringify({ sessionId }),
     });
   } catch {
-    // Inventory will be restored when the Stripe session expires.
+    // Ignore release failures; newer checkouts no longer hold inventory.
+  } finally {
+    localStorage.removeItem("visions-pending-checkout-session");
   }
 }
 

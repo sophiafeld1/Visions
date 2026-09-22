@@ -98,8 +98,16 @@ async function loadProductPage() {
     return;
   }
 
+  const resolvedProductId =
+    typeof resolveProductId === "function" ? resolveProductId(productId) : productId;
+
+  if (resolvedProductId !== productId) {
+    window.location.replace(`product.html?id=${encodeURIComponent(resolvedProductId)}`);
+    return;
+  }
+
   await loadProductsFromApi();
-  const product = getProductById(productId);
+  const product = getProductById(resolvedProductId);
 
   if (!product) {
     window.location.href = "shop.html";

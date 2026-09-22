@@ -59,7 +59,7 @@ describe("checkout inventory validation", { concurrency: 1 }, () => {
     assert.equal(result.metadataItems[0], `${TEST_PRODUCT}:${TEST_SIZE}:1`);
   });
 
-  it("rejects checkout when stock is already reserved", async () => {
+  it("rejects checkout when the item is sold out", async () => {
     await inventory.reserveItems([{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }]);
 
     await assert.rejects(
@@ -84,34 +84,47 @@ describe("checkout inventory validation", { concurrency: 1 }, () => {
   });
 
   it("skips shipping fees when the cart only contains noShipping products", () => {
-    assert.equal(checkout.cartRequiresShipping([{ id: "checkout-test-item" }]), false);
-    assert.equal(
-      checkout.cartRequiresShipping([{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }]),
-      true
-    );
-    assert.equal(
-      checkout.cartRequiresShipping([
-        { id: "checkout-test-item", size: "XS/S", quantity: 1 },
-        { id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 },
-      ]),
-      true
-    );
+    const productsStore = require(path.join(__dirname, "../lib/products-store"));
+    const noShippingId = "test-no-shipping-item";
+    const originalGetProductById = productsStore.getProductById;
+
+    productsStore.getProductById = (id) => {
+      if (productsStore.resolveProductId(id) === noShippingId) {
+        return { id: noShippingId, noShipping: true };
+      }
+      return originalGetProductById(id);
+    };
+
+    try {
+      assert.equal(checkout.cartRequiresShipping([{ id: noShippingId }]), false);
+      assert.equal(
+        checkout.cartRequiresShipping([{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }]),
+        true
+      );
+      assert.equal(
+        checkout.cartRequiresShipping([
+          { id: noShippingId, size: "XS/S", quantity: 1 },
+          { id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 },
+        ]),
+        true
+      );
+    } finally {
+      productsStore.getProductById = originalGetProductById;
+    }
   });
 
-  it("prevents a second shopper from checking out after the first reserves the last unit", async () => {
-    await inventory.reserveItems([{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }]);
-
-    const secondShopper = checkout.validateCartItems(
+  it("allows checkout while another open session has not been paid yet", async () => {
+    const result = await checkout.validateCartItems(
       [{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }],
       mockStripe()
     );
 
-    await assert.rejects(() => secondShopper, /Not enough stock/);
-    assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 0);
+    assert.equal(result.reservationItems.length, 1);
+    assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 1);
   });
 });
 
-describe("checkout webhook release", { concurrency: 1 }, () => {
+describe("checkout webhook inventory", { concurrency: 1 }, () => {
   /** @type {ReturnType<typeof createInventoryTestEnv>} */
   let testEnv;
   /** @type {ReturnType<typeof reloadInventoryStore>} */
@@ -128,7 +141,37 @@ describe("checkout webhook release", { concurrency: 1 }, () => {
     delete require.cache[WEBHOOK_HANDLERS_PATH];
   });
 
-  it("restores stock when Stripe sends checkout.session.expired", async () => {
+  it("deducts stock when Stripe sends checkout.session.completed", async () => {
+    delete require.cache[WEBHOOK_HANDLERS_PATH];
+    const { maybeFinalizeCheckoutInventory } = require(WEBHOOK_HANDLERS_PATH);
+
+    await maybeFinalizeCheckoutInventory({
+      id: "cs_test_paid_1",
+      payment_status: "paid",
+      metadata: {
+        cart: `${TEST_PRODUCT}:${TEST_SIZE}:1`,
+      },
+    });
+
+    assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 0);
+  });
+
+  it("does not restore stock when an unpaid session expires", async () => {
+    delete require.cache[WEBHOOK_HANDLERS_PATH];
+    const { maybeReleaseCheckoutInventory } = require(WEBHOOK_HANDLERS_PATH);
+
+    await maybeReleaseCheckoutInventory({
+      id: "cs_test_expired_1",
+      payment_status: "unpaid",
+      metadata: {
+        cart: `${TEST_PRODUCT}:${TEST_SIZE}:1`,
+      },
+    });
+
+    assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 1);
+  });
+
+  it("restores stock for legacy sessions that reserved inventory up front", async () => {
     delete require.cache[WEBHOOK_HANDLERS_PATH];
     const { maybeReleaseCheckoutInventory } = require(WEBHOOK_HANDLERS_PATH);
     const items = [{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }];
@@ -137,7 +180,7 @@ describe("checkout webhook release", { concurrency: 1 }, () => {
     assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 0);
 
     await maybeReleaseCheckoutInventory({
-      id: "cs_test_expired_1",
+      id: "cs_test_expired_legacy",
       payment_status: "unpaid",
       metadata: {
         inventory_reserved: "true",
@@ -146,24 +189,5 @@ describe("checkout webhook release", { concurrency: 1 }, () => {
     });
 
     assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 1);
-  });
-
-  it("keeps stock at zero after a paid checkout session", async () => {
-    delete require.cache[WEBHOOK_HANDLERS_PATH];
-    const { maybeReleaseCheckoutInventory } = require(WEBHOOK_HANDLERS_PATH);
-    const items = [{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }];
-
-    await inventory.reserveItems(items);
-
-    await maybeReleaseCheckoutInventory({
-      id: "cs_test_paid_1",
-      payment_status: "paid",
-      metadata: {
-        inventory_reserved: "true",
-        cart: `${TEST_PRODUCT}:${TEST_SIZE}:1`,
-      },
-    });
-
-    assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 0);
   });
 });

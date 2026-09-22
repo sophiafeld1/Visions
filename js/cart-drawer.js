@@ -102,10 +102,14 @@ function renderFilledCart(container, items) {
     checkoutBtn.textContent = "Redirecting…";
 
     try {
-      if (typeof trackGa4BeginCheckout === "function") {
-        trackGa4BeginCheckout(getCart());
+      const cart = typeof sanitizeCart === "function" ? sanitizeCart() : getCart();
+      if (!cart.length) {
+        throw new Error("Your cart is empty.");
       }
-      await startCheckout(getCart());
+      if (typeof trackGa4BeginCheckout === "function") {
+        trackGa4BeginCheckout(cart);
+      }
+      await startCheckout(cart);
     } catch (error) {
       await loadProductsFromApi();
       await renderCartDrawer();

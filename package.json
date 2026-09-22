@@ -11,6 +11,7 @@
     "deploy": "vercel --prod",
     "sitemap": "node scripts/generate-sitemap.js",
     "inventory:seed": "node scripts/seed-inventory.js",
+    "inventory:sync-test": "node scripts/sync-test-inventory.js",
     "test": "node --test --test-concurrency=1 tests/**/*.test.js",
     "test:inventory": "node --test --test-concurrency=1 tests/inventory-store.test.js tests/checkout-inventory.test.js"
   },

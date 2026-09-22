@@ -1,11 +1,44 @@
 const CART_STORAGE_KEY = "visions-cart";
 
+function resolveCartProductId(id) {
+  const aliases = {
+    "checkout-test-item-2": "checkout-test-item",
+    "checkout-test-item-3": "checkout-test-item",
+    "checkout-test-item-4": "checkout-test-item",
+  };
+  return aliases[id] || id;
+}
+
 function normalizeCartItem(item) {
+  const product = typeof getProductById === "function" ? getProductById(item.id) : null;
+  const defaultSize = product?.sizes?.[0] || item.size || "XS/S";
+
   return {
-    id: item.id,
-    size: item.size || "XS",
+    id: resolveCartProductId(item.id),
+    size: item.size || defaultSize,
     quantity: item.quantity || 1,
   };
+}
+
+function sanitizeCart() {
+  const cart = getCart()
+    .map(normalizeCartItem)
+    .filter((item) => {
+      if (typeof getProductById !== "function") {
+        return true;
+      }
+      return Boolean(getProductById(item.id));
+    });
+
+  const current = getCart();
+  if (
+    cart.length !== current.length ||
+    cart.some((item, index) => JSON.stringify(item) !== JSON.stringify(current[index]))
+  ) {
+    saveCart(cart);
+  }
+
+  return cart;
 }
 
 function getCart() {
