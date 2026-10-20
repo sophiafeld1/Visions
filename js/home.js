@@ -51,7 +51,7 @@ async function loadProducts() {
             }
             <a
               class="product-card__image-link"
-              href="product.html?id=${encodeURIComponent(product.id)}"
+              href="product/${encodeURIComponent(product.id)}.html"
               aria-label="View ${product.name}"
             ></a>
           </div>
@@ -72,7 +72,7 @@ async function loadProducts() {
           }
         </div>
         <div class="product-card__info">
-          <a class="product-card__title-link" href="product.html?id=${encodeURIComponent(product.id)}">
+          <a class="product-card__title-link" href="product/${encodeURIComponent(product.id)}.html">
             <h2 class="product-card__name">${product.name}${colorLabel}</h2>
           </a>
           <p class="product-card__price${soldOut ? " product-card__price--sold-out" : ""}">${formatProductPrice(product)}</p>

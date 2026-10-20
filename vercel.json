@@ -10,5 +10,19 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/product.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<id>[^&]+)"
+        }
+      ],
+      "destination": "/product/:id.html",
+      "permanent": true
+    }
   ]
 }

@@ -1,10 +1,35 @@
 const SITE_NAME = "Visions Studio Handmade Clothing";
 const SITE_URL = "https://visionsstudio.us";
+const DEFAULT_SHARE_IMAGE = `${SITE_URL}/images/home/coming-soon.jpg`;
 
 function absoluteUrl(path) {
   if (!path) return SITE_URL;
   if (path.startsWith("http")) return path;
   return `${SITE_URL}/${path.replace(/^\//, "")}`;
+}
+
+function productPagePath(productId) {
+  return `product/${encodeURIComponent(productId)}.html`;
+}
+
+function setMetaProperty(property, content) {
+  let meta = document.querySelector(`meta[property="${property}"]`);
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute("property", property);
+    document.head.appendChild(meta);
+  }
+  meta.content = content;
+}
+
+function setMetaName(name, content) {
+  let meta = document.querySelector(`meta[name="${name}"]`);
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = name;
+    document.head.appendChild(meta);
+  }
+  meta.content = content;
 }
 
 function setDocumentTitle(title) {
@@ -56,7 +81,8 @@ function productAvailability(product) {
 }
 
 function productJsonLd(product) {
-  const image = absoluteUrl(product.image);
+  const pageUrl = absoluteUrl(productPagePath(product.id));
+  const image = absoluteUrl((product.image || "").split("?")[0]);
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -69,7 +95,7 @@ function productJsonLd(product) {
     },
     offers: {
       "@type": "Offer",
-      url: absoluteUrl(`product.html?id=${product.id}`),
+      url: pageUrl,
       priceCurrency: "USD",
       price: product.price,
       availability: productAvailability(product),
@@ -77,9 +103,51 @@ function productJsonLd(product) {
   };
 }
 
+function productBreadcrumbJsonLd(product) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${SITE_URL}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Shop",
+        item: `${SITE_URL}/shop.html`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: absoluteUrl(productPagePath(product.id)),
+      },
+    ],
+  };
+}
+
 function applyProductSeo(product) {
+  const pageUrl = absoluteUrl(productPagePath(product.id));
+  const imageUrl = absoluteUrl((product.image || DEFAULT_SHARE_IMAGE).split("?")[0]);
+
   setDocumentTitle(productPageTitle(product.name));
   setMetaDescription(productMetaDescription(product));
-  setCanonical(absoluteUrl(`product.html?id=${product.id}`));
+  setCanonical(pageUrl);
+  setMetaProperty("og:site_name", SITE_NAME);
+  setMetaProperty("og:title", product.name);
+  setMetaProperty("og:description", product.description);
+  setMetaProperty("og:url", pageUrl);
+  setMetaProperty("og:type", "product");
+  setMetaProperty("og:image", imageUrl);
+  setMetaProperty("og:image:alt", product.name);
+  setMetaName("twitter:card", "summary_large_image");
+  setMetaName("twitter:title", product.name);
+  setMetaName("twitter:description", product.description);
+  setMetaName("twitter:image", imageUrl);
   setJsonLd("product-jsonld", productJsonLd(product));
+  setJsonLd("breadcrumb-jsonld", productBreadcrumbJsonLd(product));
 }
