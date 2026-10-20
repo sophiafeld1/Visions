@@ -1719,6 +1719,51 @@ body.cart-drawer-open {
   background: #ffffff;
 }
 
+.landing-hero--coming-soon .landing-hero__media {
+  height: clamp(420px, 78vh, 880px);
+  background: #f4f1ec;
+}
+
+.landing-hero--coming-soon .landing-hero__image {
+  object-position: center 18%;
+  animation: landing-hero-image-in 1.35s ease-out both;
+}
+
+.landing-hero--coming-soon .landing-hero__caption {
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--page-padding);
+  border-bottom: 1px solid var(--color-border);
+  animation: landing-hero-caption-in 0.9s ease-out 0.25s both;
+}
+
+@keyframes landing-hero-image-in {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes landing-hero-caption-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-hero--coming-soon .landing-hero__image,
+  .landing-hero--coming-soon .landing-hero__caption {
+    animation: none;
+  }
+}
+
 .landing-hero__media {
   position: relative;
   width: 100%;
@@ -2064,6 +2109,10 @@ body.cart-drawer-open {
 
   .landing-hero__media {
     height: clamp(160px, 28vh, 260px);
+  }
+
+  .landing-hero--coming-soon .landing-hero__media {
+    height: clamp(360px, 72svh, 640px);
   }
 
   .landing-hero__shop-btn {
