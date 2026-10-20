@@ -6,7 +6,7 @@ const {
   reloadInventoryStore,
 } = require("./helpers/inventory-test-env");
 
-const CHECKOUT_PATH = path.join(__dirname, "../lib/checkout");
+const CHECKOUT_PATH = require.resolve("../lib/checkout");
 const WEBHOOK_HANDLERS_PATH = path.join(__dirname, "../lib/stripe-webhook-handlers");
 
 const TEST_PRODUCT = "off-shoulder-red-polka-dot-top";
@@ -57,6 +57,47 @@ describe("checkout inventory validation", { concurrency: 1 }, () => {
     assert.equal(result.reservationItems.length, 1);
     assert.equal(result.reservationItems[0].id, TEST_PRODUCT);
     assert.equal(result.metadataItems[0], `${TEST_PRODUCT}:${TEST_SIZE}:1`);
+  });
+
+  it("requests automatic tax and a delivery address without charging or reserving stock", async () => {
+    const stripePath = require.resolve("stripe");
+    const originalStripe = require.cache[stripePath].exports;
+    const originalKey = process.env.STRIPE_SECRET_KEY;
+    let sessionConfig;
+
+    require.cache[stripePath].exports = function StripeMock() {
+      return {
+        ...mockStripe(),
+        checkout: {
+          sessions: {
+            create: async (config) => {
+              sessionConfig = config;
+              return { id: "cs_test_tax", url: "https://checkout.stripe.com/test", livemode: false };
+            },
+          },
+        },
+      };
+    };
+    process.env.STRIPE_SECRET_KEY = "sk_test_mock";
+
+    try {
+      const { createCheckoutSession } = loadCheckoutModule();
+      const result = await createCheckoutSession({
+        items: [{ id: TEST_PRODUCT, size: TEST_SIZE, quantity: 1 }],
+        origin: "https://visionsstudio.us",
+      });
+
+      assert.equal(sessionConfig.automatic_tax.enabled, true);
+      assert.deepEqual(sessionConfig.shipping_address_collection.allowed_countries, ["US"]);
+      assert.equal(sessionConfig.invoice_creation.enabled, true);
+      assert.equal(result.sessionId, "cs_test_tax");
+      assert.equal(await inventory.getQuantity(TEST_PRODUCT, TEST_SIZE), 1);
+    } finally {
+      require.cache[stripePath].exports = originalStripe;
+      if (originalKey === undefined) delete process.env.STRIPE_SECRET_KEY;
+      else process.env.STRIPE_SECRET_KEY = originalKey;
+      delete require.cache[CHECKOUT_PATH];
+    }
   });
 
   it("rejects checkout when the item is sold out", async () => {
