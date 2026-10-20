@@ -1920,6 +1920,73 @@ body.cart-drawer-open {
   color: #ffffff;
 }
 
+.landing-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(11rem, 0.72fr) minmax(0, 1.15fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 4vw, 3.5rem);
+  background: #ffffff;
+}
+
+.landing-editorial__stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  max-height: none;
+}
+
+.landing-editorial__photo {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+.landing-editorial__photo--black {
+  position: relative;
+  z-index: 1;
+  width: 62%;
+  margin-left: 0;
+}
+
+.landing-editorial__photo--teal {
+  position: relative;
+  z-index: 2;
+  width: 72%;
+  align-self: flex-end;
+  margin-top: -1.6rem;
+}
+
+.landing-editorial__copy {
+  margin: 0;
+  max-width: 16rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(28, 40, 64, 0.72);
+}
+
+.landing-editorial__feature {
+  margin: 0;
+  height: auto;
+  max-height: none;
+  justify-self: end;
+  width: min(100%, 26rem);
+}
+
+.landing-editorial__feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 52vh;
+  object-fit: contain;
+  object-position: center center;
+}
+
 .landing-featured {
   padding: 0;
   background: #ffffff;
@@ -2331,6 +2398,38 @@ body.cart-drawer-open {
 
   .landing-hero__caption {
     font-size: clamp(1.5rem, 7vw, 2.35rem);
+  }
+
+  .landing-editorial {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 2rem var(--page-padding) 1.5rem;
+  }
+
+  .landing-editorial__feature {
+    order: -1;
+  }
+
+  .landing-editorial__photo--black {
+    width: 70%;
+  }
+
+  .landing-editorial__photo--teal {
+    width: 78%;
+    margin-top: -1rem;
+  }
+
+  .landing-editorial__feature {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .landing-editorial__feature img {
+    max-height: 42vh;
+  }
+
+  .landing-editorial__copy {
+    max-width: 22rem;
   }
 
   .landing-featured__grid {
