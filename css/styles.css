@@ -12,9 +12,9 @@
   --color-surface: rgba(255, 255, 255, 0.88);
   --color-surface-solid: #ffffff;
   --color-border: rgba(28, 40, 64, 0.12);
-  --font-display: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
-  --font-body: "Cormorant Garamond", Georgia, serif;
-  --font-accent: "Special Elite", "American Typewriter", monospace;
+  --font-display: "Manrope", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Manrope", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-accent: "Manrope", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --header-height: 120px;
   --page-padding: clamp(1.25rem, 4vw, 3rem);
 }
@@ -133,11 +133,11 @@ h6 {
 
 .site-nav a,
 .site-nav-link {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-style: italic;
-  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: clamp(0.78rem, 1.2vw, 0.88rem);
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--color-text);
@@ -1714,74 +1714,140 @@ body.cart-drawer-open {
   flex-direction: column;
 }
 
-.landing-story {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: clamp(2.25rem, 5vw, 3.5rem) var(--page-padding);
-  text-align: center;
-  background: #ffffff;
-}
-
-.landing-story__title {
-  margin: 0 0 1rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  line-height: 1.15;
-  color: var(--color-text);
-}
-
-.landing-story__text {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
-  line-height: 1.7;
-  color: var(--color-text-muted);
-}
-
-.landing-story__links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem 1.75rem;
-  margin: 1.5rem 0 0;
-}
-
-.landing-story__links a {
-  font-family: var(--font-accent);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-text);
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 0.15rem;
-}
-
-.landing-story__links a:hover {
-  border-bottom-color: var(--color-text);
-}
-
 .landing-hero {
   width: 100%;
   background: #ffffff;
 }
 
+.landing-hero__pair {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  background: #f4f1ec;
+}
+
+.landing-hero__pair-image {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 62vh, 620px);
+  object-fit: cover;
+  background: #f4f1ec;
+  animation: landing-hero-image-in 1.25s ease-out both;
+}
+
+.landing-hero__pair-image--tops {
+  /* Less empty studio space above heads; keep tops in frame */
+  object-position: center 58%;
+}
+
+.landing-hero__pair-image--skirt {
+  animation-delay: 0.08s;
+  /* Pin to bottom so the teal grommet skirt is never cropped off */
+  object-position: center bottom;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.landing-hero__drop {
+  position: absolute;
+  left: clamp(0.85rem, 2vw, 1.35rem);
+  bottom: clamp(0.85rem, 2vw, 1.35rem);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.7rem 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1c2840;
+  background: #ffffff;
+  border: 1px solid rgba(28, 40, 64, 0.12);
+  box-shadow: 0 1px 2px rgba(28, 40, 64, 0.06);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  animation: landing-hero-caption-in 0.9s ease-out 0.2s both;
+}
+
+.landing-hero__drop:hover {
+  background: #1c2840;
+  border-color: #1c2840;
+  color: #ffffff;
+}
+
 .landing-hero--coming-soon .landing-hero__media {
-  height: clamp(420px, 78vh, 880px);
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 30vw, 340px);
+  overflow: hidden;
   background: #f4f1ec;
 }
 
 .landing-hero--coming-soon .landing-hero__image {
-  object-position: center 18%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 64%;
   animation: landing-hero-image-in 1.35s ease-out both;
 }
 
+.landing-hero__copy {
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 2.75rem) var(--page-padding);
+  text-align: center;
+  animation: landing-hero-caption-in 0.9s ease-out 0.15s both;
+}
+
+.landing-hero__headline {
+  margin: 0.35rem 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(28, 40, 64, 0.78);
+}
+
+.landing-hero__line {
+  margin: 0 auto;
+  max-width: 22rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: rgba(28, 40, 64, 0.62);
+}
+
 .landing-hero--coming-soon .landing-hero__caption {
-  padding: clamp(1.5rem, 4vw, 2.5rem) var(--page-padding);
-  border-bottom: 1px solid var(--color-border);
-  animation: landing-hero-caption-in 0.9s ease-out 0.25s both;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: rgba(28, 40, 64, 0.55);
 }
 
 @keyframes landing-hero-image-in {
@@ -1808,7 +1874,10 @@ body.cart-drawer-open {
 
 @media (prefers-reduced-motion: reduce) {
   .landing-hero--coming-soon .landing-hero__image,
-  .landing-hero--coming-soon .landing-hero__caption {
+  .landing-hero__pair-image,
+  .landing-hero__drop,
+  .landing-hero--coming-soon .landing-hero__caption,
+  .landing-hero__copy {
     animation: none;
   }
 }
@@ -1852,7 +1921,7 @@ body.cart-drawer-open {
 }
 
 .landing-featured {
-  padding: 0 0 clamp(2rem, 5vw, 3rem);
+  padding: 0;
   background: #ffffff;
 }
 
@@ -1870,12 +1939,46 @@ body.cart-drawer-open {
   line-height: 1.4;
 }
 
+.landing-featured__stage {
+  position: relative;
+}
+
 .landing-featured__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   max-width: none;
   margin: 0;
+}
+
+.landing-featured__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 1rem 2.25rem;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--color-text);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.landing-featured__cta:hover {
+  background: var(--color-text);
+  color: #ffffff;
 }
 
 .landing-featured__item {
@@ -2162,7 +2265,45 @@ body.cart-drawer-open {
   }
 
   .landing-hero--coming-soon .landing-hero__media {
-    height: clamp(360px, 72svh, 640px);
+    height: clamp(200px, 52vw, 300px);
+  }
+
+  .landing-hero--coming-soon .landing-hero__image {
+    object-position: center 58%;
+  }
+
+  .landing-hero__pair-image {
+    height: clamp(260px, 52vh, 420px);
+  }
+
+  .landing-hero__pair-image--tops {
+    object-position: center 56%;
+  }
+
+  .landing-hero__pair-image--skirt {
+    object-position: center bottom;
+  }
+
+  .landing-hero__drop {
+    left: 0.75rem;
+    bottom: 0.75rem;
+    min-height: 2.35rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.72rem;
+  }
+
+  .landing-hero__copy {
+    padding: 1.5rem var(--page-padding) 1.75rem;
+  }
+
+  .landing-hero__headline {
+    font-size: 0.88rem;
+    letter-spacing: 0.16em;
+  }
+
+  .landing-hero__line {
+    font-size: 0.92rem;
+    max-width: 17rem;
   }
 
   .landing-hero__shop-btn {
@@ -2175,6 +2316,12 @@ body.cart-drawer-open {
 
   .landing-featured__intro {
     font-size: 0.68rem;
+  }
+
+  .landing-featured__cta {
+    min-height: 2.85rem;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.78rem;
   }
 
   .landing-hero__banner {
