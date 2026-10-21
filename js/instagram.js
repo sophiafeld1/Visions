@@ -2,6 +2,21 @@ const INSTAGRAM_PROFILE_URL = "https://www.instagram.com/visionssclothing/";
 
 const INSTAGRAM_POSTS = [
   {
+    image: "images/instagram/post-9.jpg?v=1",
+    url: INSTAGRAM_PROFILE_URL,
+    alt: "Soft blue off-shoulder wrap top and mini skirt",
+  },
+  {
+    image: "images/instagram/post-10.png?v=1",
+    url: INSTAGRAM_PROFILE_URL,
+    alt: "Red polka dot off-shoulder top",
+  },
+  {
+    image: "images/instagram/post-11.jpg?v=1",
+    url: INSTAGRAM_PROFILE_URL,
+    alt: "Grid of handmade tops from the upcoming collection",
+  },
+  {
     image: "images/instagram/post-7.jpg?v=1",
     url: INSTAGRAM_PROFILE_URL,
     alt: "Black V-neck top and mini skirt",

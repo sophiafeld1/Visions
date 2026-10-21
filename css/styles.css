@@ -1737,15 +1737,14 @@ body.cart-drawer-open {
   animation: landing-hero-image-in 1.25s ease-out both;
 }
 
-.landing-hero__pair-image--tops {
-  /* Less empty studio space above heads; keep tops in frame */
-  object-position: center 58%;
+.landing-hero__pair-image--twin {
+  object-position: center bottom;
 }
 
 .landing-hero__pair-image--skirt {
-  animation-delay: 0.08s;
-  /* Pin to bottom so the teal grommet skirt is never cropped off */
-  object-position: center bottom;
+  animation-delay: 0.12s;
+  /* A small shift up from the bottom so the shirt neckline stays in */
+  object-position: center 94%;
 }
 
 .visually-hidden {
@@ -2343,12 +2342,12 @@ body.cart-drawer-open {
     height: clamp(260px, 52vh, 420px);
   }
 
-  .landing-hero__pair-image--tops {
-    object-position: center 56%;
+  .landing-hero__pair-image--twin {
+    object-position: center bottom;
   }
 
   .landing-hero__pair-image--skirt {
-    object-position: center bottom;
+    object-position: center 94%;
   }
 
   .landing-hero__drop {
